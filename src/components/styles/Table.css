@@ -1,0 +1,45 @@
+.table-container {
+  padding: 10px 20px;
+}
+.top-channels {
+  color: #212b36;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 26px;
+}
+table {
+  text-align: left;
+  width: 100%;
+}
+table th {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: left;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  border-bottom: 3px solid #f7f9fc;
+}
+table th img {
+  margin-right: 10px;
+  width: 50px;
+}
+table td {
+  text-align: left;
+  padding: 10px;
+  border-bottom: 3px solid #f7f9fc;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: left;
+  color: #1c2434;
+}
+
+.top-channels {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 26px;
+  text-align: left;
+}

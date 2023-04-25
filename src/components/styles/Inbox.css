@@ -1,0 +1,40 @@
+.left-side {
+  border-right: 1px solid #e2e8f0;
+}
+.left-side ul li {
+  width: 100%;
+  padding: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: #64748b;
+  cursor: pointer;
+}
+.active,
+.li:hover {
+  color: #3c50e0;
+  background-color: rgba(48, 86, 211, 0.04);
+}
+button {
+  margin-bottom: 20%;
+  margin-left: 10%;
+  background: #3c50e0;
+  border-radius: 3px;
+  border: 0;
+  padding: 10px 124px 10px 22px;
+  color: #ffff;
+  cursor: pointer;
+}
+table {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0px;
+  color: #64748b;
+}

@@ -1,0 +1,38 @@
+.container1 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 4px;
+  color: #64748b;
+}
+
+input[type="file"]::file-selector-button {
+  padding: 12px 30px;
+  font-size: 14px;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 4px;
+  color: #64748b;
+  background-color: #e2e8f0;
+  cursor: pointer;
+}
+.container2 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 4px;
+  color: #64748b;
+}
+
+.container2 input[type="file"]::file-selector-button {
+  padding: 5px 20px;
+  margin: 10px;
+  font-size: 14px;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 4px;
+  color: #64748b;
+  background-color: #e2e8f0;
+  cursor: pointer;
+}
