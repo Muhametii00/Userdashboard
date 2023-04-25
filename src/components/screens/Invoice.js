@@ -11,7 +11,7 @@ export const Invoice = () => {
         marginTop: "5%",
       }}
     >
-      <WhiteCard height="95%" size="100%">
+      <WhiteCard height="93%" size="100%">
         <div style={{ padding: "5px 25px" }}>
           <div
             style={{
@@ -210,71 +210,162 @@ export const Invoice = () => {
               justifyContent: "space-between",
             }}
           >
-            <div style={{ width: "18%" }}>
-              <h2
-                style={{
-                  fontStyle: "normal",
-                  fontWeight: "500",
-                  fontSize: "22px",
-                  color: "#1C2434",
-                }}
-              >
-                Shipping Method
-              </h2>
-              <p
-                style={{
-                  fontStyle: "normal",
-                  fontWeight: "500",
-                  fontSize: "15px",
-                  lineHeight: "33px",
-                  color: "#64748B",
-                }}
-              >
-                FedEx - Take up to 3 <br /> working days.
-              </p>
-            </div>
-            <div style={{ width: "18%" }}>
-              <h2
-                style={{
-                  fontStyle: "normal",
-                  fontWeight: "500",
-                  fontSize: "22px",
-                  color: "#1C2434",
-                }}
-              >
-                Payment Method
-              </h2>
-              <p
-                style={{
-                  fontStyle: "normal",
-                  fontWeight: "500",
-                  fontSize: "15px",
-                  lineHeight: "24px",
-                  color: "#64748B",
-                }}
-              >
-                Apply Pay Mastercard
-              </p>
-              <p
-                style={{
-                  fontStyle: "normal",
-                  fontWeight: "500",
-                  fontSize: "14px",
-                  lineHeight: "24px",
-                  color: "#64748B",
-                }}
-              >
-                **** **** **** 5874
-              </p>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                justifyContent: "space-between",
+                width: "100%",
+              }}
+            >
+              <div style={{ width: "40%" }}>
+                <h2
+                  style={{
+                    fontStyle: "normal",
+                    fontWeight: "500",
+                    fontSize: "22px",
+                    color: "#1C2434",
+                  }}
+                >
+                  Shipping Method
+                </h2>
+                <p
+                  style={{
+                    fontStyle: "normal",
+                    fontWeight: "500",
+                    fontSize: "15px",
+                    lineHeight: "25px",
+                    color: "#64748B",
+                  }}
+                >
+                  FedEx - Take up to 3 <br /> working days.
+                </p>
+              </div>
+              <div style={{ width: "60%" }}>
+                <h2
+                  style={{
+                    fontStyle: "normal",
+                    fontWeight: "500",
+                    fontSize: "22px",
+                    color: "#1C2434",
+                  }}
+                >
+                  Payment Method
+                </h2>
+                <p
+                  style={{
+                    fontStyle: "normal",
+                    fontWeight: "500",
+                    fontSize: "15px",
+                    color: "#64748B",
+                  }}
+                >
+                  Apply Pay Mastercard
+                </p>
+                <p
+                  style={{
+                    fontStyle: "normal",
+                    fontWeight: "500",
+                    fontSize: "14px",
+                    color: "#64748B",
+                  }}
+                >
+                  **** **** **** 5874
+                </p>
+              </div>
             </div>
             <div
               style={{
-                width: "40%",
+                width: "33%",
+                marginRight: "5%",
               }}
-            ></div>
+            >
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "row",
+                  justifyContent: "space-between",
+                  borderBottom: "1px solid #E2E8F0",
+                  paddingBottom: "7%",
+                }}
+              >
+                <div>
+                  <p
+                    style={{
+                      fontStyle: "normal",
+                      fontWeight: "500",
+                      fontSize: "16px",
+                      color: "#1C2434",
+                    }}
+                  >
+                    Subtotal
+                  </p>
+                  <p
+                    style={{
+                      fontStyle: "normal",
+                      fontWeight: "500",
+                      fontSize: "16px",
+                      color: "#1C2434",
+                    }}
+                  >
+                    Shipping Cost (+)
+                  </p>
+                </div>
+                <div>
+                  <p>$120.00</p>
+                  <p>$10.00</p>
+                </div>
+              </div>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "row",
+                  justifyContent: "space-between",
+                  paddingTop: "5%",
+                }}
+              >
+                <p>Total</p>
+                <p>$130.00</p>
+              </div>
+            </div>
           </div>
 
-          <div></div>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              alignItems: "center",
+              justifyContent: "flex-end",
+              gap: "1%",
+              marginRight: "3%",
+              marginTop: "2%",
+            }}
+          >
+            <button
+              style={{
+                background: "transparent",
+                border: "1px solid #3C50E0",
+                borderRadius: "4px",
+                color: "#3C50E0",
+                padding: "10px 25px",
+                margin: "0",
+              }}
+            >
+              Download Invoice
+            </button>
+            <button
+              style={{
+                backgroundColor: "#3C50E0",
+                border: "1px solid #3C50E0",
+                borderRadius: "4px",
+                color: "#EFF4FB",
+                padding: "10px 25px",
+                margin: "0",
+              }}
+            >
+              Send Invoice
+            </button>
+          </div>
         </div>
       </WhiteCard>
     </div>
