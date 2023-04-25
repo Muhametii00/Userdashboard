@@ -11,8 +11,8 @@ export const Invoice = () => {
         marginTop: "5%",
       }}
     >
-      <WhiteCard height="75%" size="100%">
-        <div style={{ padding: "0px 15px" }}>
+      <WhiteCard height="95%" size="100%">
+        <div style={{ padding: "5px 25px" }}>
           <div
             style={{
               display: "flex",
@@ -26,7 +26,6 @@ export const Invoice = () => {
                   fontStyle: "normal",
                   fontWeight: "500",
                   fontSize: "15px",
-                  lineHeight: "24px",
                   color: "#1C2434",
                 }}
               >
@@ -37,7 +36,6 @@ export const Invoice = () => {
                   fontStyle: "normal",
                   fontWeight: "500",
                   fontSize: "22px",
-                  lineHeight: "30px",
                   color: "#1C2434",
                 }}
               >
@@ -48,7 +46,6 @@ export const Invoice = () => {
                   fontStyle: "normal",
                   fontWeight: "500",
                   fontSize: "15px",
-                  lineHeight: "24px",
                   color: "#64748B",
                 }}
               >
@@ -59,7 +56,6 @@ export const Invoice = () => {
                   fontStyle: "normal",
                   fontWeight: "500",
                   fontSize: "14px",
-                  lineHeight: "24px",
                   color: "#64748B",
                 }}
               >
@@ -72,7 +68,6 @@ export const Invoice = () => {
                   fontStyle: "normal",
                   fontWeight: "500",
                   fontSize: "16px",
-                  lineHeight: "24px",
                   color: "#1C2434",
                 }}
               >
@@ -83,7 +78,6 @@ export const Invoice = () => {
                   fontStyle: "normal",
                   fontWeight: "500",
                   fontSize: "22px",
-                  lineHeight: "30px",
                   color: "#1C2434",
                 }}
               >
@@ -94,7 +88,6 @@ export const Invoice = () => {
                   fontStyle: "normal",
                   fontWeight: "500",
                   fontSize: "15px",
-                  lineHeight: "24px",
                   color: "#64748B",
                 }}
               >
@@ -105,7 +98,6 @@ export const Invoice = () => {
                   fontStyle: "normal",
                   fontWeight: "500",
                   fontSize: "14px",
-                  lineHeight: "24px",
                   color: "#64748B",
                 }}
               >
@@ -118,7 +110,6 @@ export const Invoice = () => {
                   fontStyle: "normal",
                   fontWeight: "500",
                   fontSize: "22px",
-                  lineHeight: "30px",
                   color: "#1C2434",
                 }}
               >
@@ -129,7 +120,7 @@ export const Invoice = () => {
           <div
             style={{
               border: "1px solid #E2E8F0",
-              padding: "5px 15px",
+              padding: "15px ",
               display: "flex",
               flexDirection: "row",
               alignItems: "center",
@@ -142,15 +133,37 @@ export const Invoice = () => {
                 display: "flex",
                 flexDirection: "row",
                 alignItems: "center",
-                gap: "3%",
+                columnGap: "3%",
                 width: "50%",
               }}
             >
               <img width="80px" height="80px" src={Product} alt="Product" />
-              <div style={{ width: "100%" }}>
-                <p>Mist Black Triblend</p>
+              <div
+                style={{
+                  width: "100%",
+                }}
+              >
+                <p
+                  style={{
+                    fontStyle: "normal",
+                    fontWeight: "500",
+                    fontSize: "16px",
+                    color: "#1C2434",
+                    marginBottom: "0",
+                  }}
+                >
+                  Mist Black Triblend
+                </p>
                 <span
-                  style={{ display: "flex", flexDirection: "row", gap: "5%" }}
+                  style={{
+                    display: "flex",
+                    flexDirection: "row",
+                    columnGap: "5%",
+                    fontStyle: "normal",
+                    fontWeight: "500",
+                    fontSize: "14px",
+                    color: "#64748B",
+                  }}
                 >
                   <p>Color: White</p>
                   <p>Size: Medium</p>
@@ -168,11 +181,99 @@ export const Invoice = () => {
                 marginRight: "3%",
               }}
             >
-              <h4>Qty: 01</h4>
-              <h4>$120.00</h4>
+              <h4
+                style={{
+                  fontStyle: "normal",
+                  fontWeight: "500",
+                  fontSize: "16px",
+                  color: "#1C2434",
+                }}
+              >
+                Qty: 01
+              </h4>
+              <h4
+                style={{
+                  fontStyle: "normal",
+                  fontWeight: "500",
+                  fontSize: "16px",
+                  color: "#1C2434",
+                }}
+              >
+                $120.00
+              </h4>
             </div>
           </div>
-          <div></div>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "space-between",
+            }}
+          >
+            <div style={{ width: "18%" }}>
+              <h2
+                style={{
+                  fontStyle: "normal",
+                  fontWeight: "500",
+                  fontSize: "22px",
+                  color: "#1C2434",
+                }}
+              >
+                Shipping Method
+              </h2>
+              <p
+                style={{
+                  fontStyle: "normal",
+                  fontWeight: "500",
+                  fontSize: "15px",
+                  lineHeight: "33px",
+                  color: "#64748B",
+                }}
+              >
+                FedEx - Take up to 3 <br /> working days.
+              </p>
+            </div>
+            <div style={{ width: "18%" }}>
+              <h2
+                style={{
+                  fontStyle: "normal",
+                  fontWeight: "500",
+                  fontSize: "22px",
+                  color: "#1C2434",
+                }}
+              >
+                Payment Method
+              </h2>
+              <p
+                style={{
+                  fontStyle: "normal",
+                  fontWeight: "500",
+                  fontSize: "15px",
+                  lineHeight: "24px",
+                  color: "#64748B",
+                }}
+              >
+                Apply Pay Mastercard
+              </p>
+              <p
+                style={{
+                  fontStyle: "normal",
+                  fontWeight: "500",
+                  fontSize: "14px",
+                  lineHeight: "24px",
+                  color: "#64748B",
+                }}
+              >
+                **** **** **** 5874
+              </p>
+            </div>
+            <div
+              style={{
+                width: "40%",
+              }}
+            ></div>
+          </div>
+
           <div></div>
         </div>
       </WhiteCard>
