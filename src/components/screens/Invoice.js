@@ -150,7 +150,7 @@ export const Invoice = () => {
               <div style={{ width: "100%" }}>
                 <p>Mist Black Triblend</p>
                 <span
-                  style={{ display: "flex", flexDirection: "row", gap: "3%" }}
+                  style={{ display: "flex", flexDirection: "row", gap: "5%" }}
                 >
                   <p>Color: White</p>
                   <p>Size: Medium</p>
