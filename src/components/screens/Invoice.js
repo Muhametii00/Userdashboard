@@ -1,6 +1,7 @@
 import React from "react";
 import WhiteCard from "../Cards.js/WhiteCard";
 import "../styles/Invoice.css";
+import Product from "../../assets/icons/Product.png";
 
 export const Invoice = () => {
   return (
@@ -125,9 +126,51 @@ export const Invoice = () => {
               </h2>
             </div>
           </div>
-          <div>
-            <div></div>
-            <div></div>
+          <div
+            style={{
+              border: "1px solid #E2E8F0",
+              padding: "5px 15px",
+              display: "flex",
+              flexDirection: "row",
+              alignItems: "center",
+              justifyContent: "space-between",
+              margin: "3% 0%",
+            }}
+          >
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                alignItems: "center",
+                gap: "3%",
+                width: "50%",
+              }}
+            >
+              <img width="80px" height="80px" src={Product} alt="Product" />
+              <div style={{ width: "100%" }}>
+                <p>Mist Black Triblend</p>
+                <span
+                  style={{ display: "flex", flexDirection: "row", gap: "5%" }}
+                >
+                  <p>Color: White</p>
+                  <p>Size: Medium</p>
+                </span>
+              </div>
+            </div>
+            <div
+              style={{
+                width: "50%",
+                display: "flex",
+                flexDirection: "row",
+                alignItems: "center",
+                justifyContent: "flex-end",
+                gap: "15%",
+                marginRight: "3%",
+              }}
+            >
+              <h4>Qty: 01</h4>
+              <h4>$120.00</h4>
+            </div>
           </div>
           <div></div>
           <div></div>
