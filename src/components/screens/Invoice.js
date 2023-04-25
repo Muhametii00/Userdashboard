@@ -62,7 +62,7 @@ export const Invoice = () => {
                   color: "#64748B",
                 }}
               >
-                Address: 2972 Westheimer Rd. Santa Ana.
+                Address: 2972 Westheimer Rd. Santa.
               </p>
             </div>
             <div>
