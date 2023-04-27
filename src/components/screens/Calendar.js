@@ -8,7 +8,7 @@ export const Timetable = () => {
   return (
     <div
       style={{
-        width: "70%",
+        width: "74%",
         marginTop: "3%",
       }}
     >
