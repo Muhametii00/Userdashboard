@@ -40,7 +40,20 @@ export const Inbox = () => {
                 }}
               >
                 <span>
-                  <button>Compose</button>
+                  <button
+                    style={{
+                      marginBottom: "20%",
+                      marginLeft: "5%",
+                      padding: "10px 124px 10px 22px",
+                      backgroundColor: "#3c50e0",
+                      borderRadius: "3px",
+                      border: "0",
+                      color: "#ffff",
+                      cursor: "pointer",
+                    }}
+                  >
+                    Compose
+                  </button>
                 </span>
                 <li
                   style={{
