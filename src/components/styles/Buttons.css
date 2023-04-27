@@ -1,0 +1,30 @@
+.button-1 {
+  color: #ffffff;
+  padding: 10px 35px;
+  margin-left: 0;
+  margin-bottom: 5%;
+  border-radius: 0;
+}
+.button-2 {
+  color: #ffffff;
+  padding: 10px 35px;
+  margin-left: 0;
+  margin-bottom: 5%;
+  border-radius: 5px;
+}
+.button-3 {
+  color: #ffffff;
+  padding: 10px 35px;
+  margin-left: 0;
+  margin-bottom: 5%;
+  border-radius: 30px;
+}
+.button-4 {
+  background: transparent;
+  border: 1px solid #3c50e0;
+  color: #3c50e0;
+  padding: 10px 35px;
+  margin-left: 0;
+  margin-bottom: 5%;
+  border-radius: 5px;
+}
