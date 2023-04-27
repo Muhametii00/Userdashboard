@@ -12,7 +12,7 @@ import { SignUp } from "../components/screens/SignUp";
 import { ResetPassword } from "../components/screens/ResetPassword";
 import { Alerts } from "../components/screens/Alerts";
 import { Buttons } from "../components/screens/Buttons";
-import { Calendar } from "../components/screens/Calendar";
+import { Timetable } from "../components/screens/Calendar";
 
 export const dashboardRoutes = [
   {
@@ -30,7 +30,7 @@ export const dashboardRoutes = [
       { path: "/reset-password", element: <ResetPassword /> },
       { path: "/alerts", element: <Alerts /> },
       { path: "/buttons", element: <Buttons /> },
-      { path: "/calendar", element: <Calendar /> },
+      { path: "/calendar", element: <Timetable /> },
     ],
   },
 ];
