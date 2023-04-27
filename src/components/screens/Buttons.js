@@ -1,6 +1,12 @@
 import React from "react";
 import WhiteCard from "../Cards.js/WhiteCard";
 import "../styles/Buttons.css";
+import Envelope from "../../assets/icons/Envelope.png";
+import BlueEnvelope from "../../assets/icons/BlueEnvelope.png";
+import Cart from "../../assets/icons/Cart.png";
+import BlueCart from "../../assets/icons/BlueCart.png";
+import UserLove from "../../assets/icons/UserLove.png";
+import BlueUserLove from "../../assets/icons/BlueUserLove.png";
 
 export const Buttons = () => {
   return (
@@ -156,25 +162,69 @@ export const Buttons = () => {
               }}
             >
               <button
-                style={{ backgroundColor: "#3C50E0" }}
+                style={{ backgroundColor: "#3C50E0", padding: "5px 35px" }}
                 className="button-1"
               >
-                Button With Icon
+                <div
+                  style={{
+                    width: "120%",
+                    display: "flex",
+                    flexDirection: "row",
+                    alignItems: "center",
+                    gap: "5%",
+                  }}
+                >
+                  <img src={Envelope} alt="Envelope" />
+                  <p> Button With Icon</p>
+                </div>
               </button>
               <button
                 style={{ backgroundColor: "#10B981", borderRadius: "0" }}
                 className="button-2"
               >
-                Button With Icon
+                <div
+                  style={{
+                    width: "120%",
+                    display: "flex",
+                    flexDirection: "row",
+                    alignItems: "center",
+                    gap: "5%",
+                  }}
+                >
+                  <img src={Envelope} alt="Envelope" />
+                  <p> Button With Icon</p>
+                </div>
               </button>
               <button
                 style={{ backgroundColor: "#1C2434", borderRadius: "0" }}
                 className="button-3"
               >
-                Button With Icon
+                <div
+                  style={{
+                    width: "120%",
+                    display: "flex",
+                    flexDirection: "row",
+                    alignItems: "center",
+                    gap: "5%",
+                  }}
+                >
+                  <img src={Envelope} alt="Envelope" />
+                  <p> Button With Icon</p>
+                </div>
               </button>
               <button style={{ borderRadius: "0" }} className="button-4">
-                Button With Icon
+                <div
+                  style={{
+                    width: "120%",
+                    display: "flex",
+                    flexDirection: "row",
+                    alignItems: "center",
+                    gap: "5%",
+                  }}
+                >
+                  <img src={BlueEnvelope} alt="Envelope" />
+                  <p> Button With Icon</p>
+                </div>
               </button>
             </div>
             <div
@@ -188,19 +238,52 @@ export const Buttons = () => {
                 style={{ backgroundColor: "#3C50E0" }}
                 className="button-2"
               >
-                Button With Icon
+                <div
+                  style={{
+                    width: "120%",
+                    display: "flex",
+                    flexDirection: "row",
+                    alignItems: "center",
+                    gap: "5%",
+                  }}
+                >
+                  <img src={Cart} alt="Cart" />
+                  <p> Button With Icon</p>
+                </div>
               </button>
               <button
                 style={{ backgroundColor: "#10B981" }}
                 className="button-2"
               >
-                Button With Icon
+                <div
+                  style={{
+                    width: "120%",
+                    display: "flex",
+                    flexDirection: "row",
+                    alignItems: "center",
+                    gap: "5%",
+                  }}
+                >
+                  <img src={Cart} alt="Cart" />
+                  <p> Button With Icon</p>
+                </div>
               </button>
               <button
                 style={{ backgroundColor: "#1C2434" }}
                 className="button-2"
               >
-                Button With Icon
+                <div
+                  style={{
+                    width: "120%",
+                    display: "flex",
+                    flexDirection: "row",
+                    alignItems: "center",
+                    gap: "5%",
+                  }}
+                >
+                  <img src={Cart} alt="Cart" />
+                  <p> Button With Icon</p>
+                </div>
               </button>
               <button
                 style={{
@@ -210,7 +293,18 @@ export const Buttons = () => {
                 }}
                 className="button-2"
               >
-                Button With Icon
+                <div
+                  style={{
+                    width: "120%",
+                    display: "flex",
+                    flexDirection: "row",
+                    alignItems: "center",
+                    gap: "5%",
+                  }}
+                >
+                  <img src={BlueCart} alt="BlueCart" />
+                  <p> Button With Icon</p>
+                </div>
               </button>
             </div>
             <div
@@ -224,19 +318,52 @@ export const Buttons = () => {
                 style={{ backgroundColor: "#3C50E0" }}
                 className="button-3"
               >
-                Button With Icon
+                <div
+                  style={{
+                    width: "120%",
+                    display: "flex",
+                    flexDirection: "row",
+                    alignItems: "center",
+                    gap: "5%",
+                  }}
+                >
+                  <img src={UserLove} alt="UserLove" />
+                  <p> Button With Icon</p>
+                </div>
               </button>
               <button
                 style={{ backgroundColor: "#10B981" }}
                 className="button-3"
               >
-                Button With Icon
+                <div
+                  style={{
+                    width: "120%",
+                    display: "flex",
+                    flexDirection: "row",
+                    alignItems: "center",
+                    gap: "5%",
+                  }}
+                >
+                  <img src={UserLove} alt="UserLove" />
+                  <p> Button With Icon</p>
+                </div>
               </button>
               <button
                 style={{ backgroundColor: "#1C2434" }}
                 className="button-3"
               >
-                Button With Icon
+                <div
+                  style={{
+                    width: "120%",
+                    display: "flex",
+                    flexDirection: "row",
+                    alignItems: "center",
+                    gap: "5%",
+                  }}
+                >
+                  <img src={UserLove} alt="UserLove" />
+                  <p> Button With Icon</p>
+                </div>
               </button>
               <button
                 style={{
@@ -246,7 +373,18 @@ export const Buttons = () => {
                 }}
                 className="button-3"
               >
-                Button With Icon
+                <div
+                  style={{
+                    width: "120%",
+                    display: "flex",
+                    flexDirection: "row",
+                    alignItems: "center",
+                    gap: "5%",
+                  }}
+                >
+                  <img src={BlueUserLove} alt="BlueUserLove" />
+                  <p> Button With Icon</p>
+                </div>
               </button>
             </div>
           </div>
