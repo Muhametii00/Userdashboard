@@ -1,8 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import WhiteCard from "../Cards.js/WhiteCard";
 import Person from "../../assets/icons/Photo.png";
+import { FileUploader } from "react-drag-drop-files";
+import "../styles/Settings.css";
+
+const fileTypes = ["JPG", "PNG", "GIF"];
 
 export const Settings = () => {
+  const [file, setFile] = useState(null);
+  const handleChange = (file) => {
+    setFile(file);
+  };
+
   return (
     <div
       style={{
@@ -204,7 +213,7 @@ export const Settings = () => {
           </div>
         </div>
       </WhiteCard>
-      <WhiteCard height="60%" size="35%">
+      <WhiteCard height="65%" size="35%">
         <div
           style={{
             color: "#1C2434",
@@ -261,9 +270,10 @@ export const Settings = () => {
                   style={{
                     display: "flex",
                     flexDirection: "row",
-                    gap: "0",
+                    gap: "5%",
                     justifyContent: "flex-start",
                     width: "40%",
+                    marginLeft: "4%",
                   }}
                 >
                   <button
@@ -291,8 +301,48 @@ export const Settings = () => {
                 </span>
               </div>
             </div>
-            <div></div>
-            <div></div>
+            <div style={{ padding: "5%" }}>
+              <FileUploader
+                handleChange={handleChange}
+                name="file"
+                types={fileTypes}
+              />
+            </div>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                alignItems: "center",
+                justifyContent: "flex-end",
+                gap: "3%",
+                marginRight: "4%",
+              }}
+            >
+              <button
+                style={{
+                  background: "transparent",
+                  border: "1px solid #E2E8F0",
+                  borderRadius: "4px",
+                  color: "#1C2434",
+                  padding: "10px 25px",
+                  margin: "0",
+                }}
+              >
+                Cancel
+              </button>
+              <button
+                style={{
+                  backgroundColor: "#3C50E0",
+                  border: "1px solid #3C50E0",
+                  borderRadius: "4px",
+                  color: "#EFF4FB",
+                  padding: "10px 25px",
+                  margin: "0",
+                }}
+              >
+                Save
+              </button>
+            </div>
           </div>
         </div>
       </WhiteCard>
