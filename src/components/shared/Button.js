@@ -8,6 +8,8 @@ export const Button = ({
   background = "",
   border = "",
   color = "#ffff",
+  cursor = "pointer",
+  bottom = "",
 }) => {
   return (
     <button
@@ -18,6 +20,8 @@ export const Button = ({
         backgroundColor: background,
         border: border,
         color: color,
+        cursor: cursor,
+        marginBottom: bottom,
       }}
     >
       {children}

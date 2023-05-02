@@ -84,6 +84,7 @@ export const Profile = () => {
                 fontSize: "16px",
                 fontWeight: "500",
                 color: "#64748B",
+                marginBottom: "3%",
               }}
             >
               Ui/Ux Designer
@@ -206,6 +207,7 @@ export const Profile = () => {
                 fontWeight: "500",
                 color: "#1C2434",
                 marginTop: "2%",
+                marginBottom: "2%",
               }}
             >
               About me
@@ -234,6 +236,7 @@ export const Profile = () => {
                 fontWeight: "500",
                 color: "#1C2434",
                 marginTop: "2%",
+                marginBottom: "2%",
               }}
             >
               Follow me on

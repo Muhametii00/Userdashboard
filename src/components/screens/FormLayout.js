@@ -1,5 +1,6 @@
 import React from "react";
 import WhiteCard from "../Cards.js/WhiteCard";
+import { Button } from "../shared/Button";
 
 export const FormLayout = () => {
   return (
@@ -195,20 +196,15 @@ export const FormLayout = () => {
                   marginBottom: "20px",
                 }}
               ></input>
-              <input
-                type="submit"
-                value="Send Message"
-                placeholder="Default input text!"
-                style={{
-                  border: "1.5px solid #E2E8F0",
-                  borderRadius: "4px",
-                  color: "#fff",
-                  width: "98%",
-                  padding: "15px",
-                  backgroundColor: "#3C50E0",
-                  cursor: "pointer",
-                }}
-              ></input>
+              <Button
+                width="98%"
+                background="#3C50E0"
+                border="0"
+                padding="15px"
+                radius="4px"
+              >
+                Send Message
+              </Button>
             </div>
           </div>
         </WhiteCard>
@@ -325,20 +321,15 @@ export const FormLayout = () => {
                   Forget password?
                 </p>
               </div>
-              <input
-                type="submit"
-                value="Sign In"
-                placeholder="Default input text!"
-                style={{
-                  border: "1.5px solid #E2E8F0",
-                  borderRadius: "4px",
-                  color: "#fff",
-                  width: "98%",
-                  padding: "15px",
-                  backgroundColor: "#3C50E0",
-                  cursor: "pointer",
-                }}
-              ></input>
+              <Button
+                width="98%"
+                background="#3C50E0"
+                border="0"
+                padding="15px"
+                radius="4px"
+              >
+                Sign In
+              </Button>
             </div>
           </div>
         </WhiteCard>
@@ -462,20 +453,15 @@ export const FormLayout = () => {
                     marginBottom: "20px",
                   }}
                 ></input>
-                <input
-                  type="submit"
-                  value="Sign Up"
-                  placeholder="Default input text!"
-                  style={{
-                    border: "1.5px solid #E2E8F0",
-                    borderRadius: "4px",
-                    color: "#fff",
-                    width: "98%",
-                    padding: "15px",
-                    backgroundColor: "#3C50E0",
-                    cursor: "pointer",
-                  }}
-                ></input>
+                <Button
+                  width="98%"
+                  background="#3C50E0"
+                  border="0"
+                  padding="15px"
+                  radius="4px"
+                >
+                  Sign Up
+                </Button>
               </div>
             </div>
           </div>

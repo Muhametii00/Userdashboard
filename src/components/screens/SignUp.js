@@ -3,6 +3,7 @@ import WhiteCard from "../Cards.js/WhiteCard";
 import DarkLogo from "../../assets/icons/DarkLogo.png";
 import UserPhone from "../../assets/icons/UserPhone.png";
 import Google from "../../assets/icons/Google.png";
+import { Button } from "../shared/Button";
 
 export const SignUp = () => {
   return (
@@ -157,29 +158,24 @@ export const SignUp = () => {
                   marginBottom: "7%",
                 }}
               ></input>
-              <button
-                style={{
-                  width: "112%",
-                  padding: "20px",
-                  borderRadius: "8px",
-                  backgroundColor: "#3056D3",
-                  border: "0",
-                  color: "#ffff",
-                  marginBottom: "5%",
-                }}
+              <Button
+                width="110%"
+                padding="17px"
+                background="#3056D3"
+                border="0"
+                radius="8px"
+                bottom="5%"
               >
                 Create account
-              </button>
-              <button
-                style={{
-                  width: "112%",
-                  padding: "7px",
-                  borderRadius: "8px",
-                  backgroundColor: "#EFF4FB",
-                  border: "0",
-                  color: "#64748B",
-                  marginBottom: "2%",
-                }}
+              </Button>
+              <Button
+                width="110%"
+                background="#EFF4FB"
+                color="#64748B"
+                border="0"
+                radius="8px"
+                padding="5px"
+                bottom="5%"
               >
                 <span
                   style={{
@@ -190,9 +186,9 @@ export const SignUp = () => {
                   }}
                 >
                   <img width="10%" src={Google} alt="Google" />
-                  <p>Sign up with Google</p>
+                  <p>Sign in with Google</p>
                 </span>
-              </button>
+              </Button>
               <span
                 style={{
                   display: "flex",

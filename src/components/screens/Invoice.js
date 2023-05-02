@@ -2,6 +2,7 @@ import React from "react";
 import WhiteCard from "../Cards.js/WhiteCard";
 import "../styles/Invoice.css";
 import Product from "../../assets/icons/Product.png";
+import { Button } from "../shared/Button";
 
 export const Invoice = () => {
   return (
@@ -341,30 +342,25 @@ export const Invoice = () => {
               marginTop: "2%",
             }}
           >
-            <button
-              style={{
-                background: "transparent",
-                border: "1px solid #3C50E0",
-                borderRadius: "4px",
-                color: "#3C50E0",
-                padding: "10px 25px",
-                margin: "0",
-              }}
+            <Button
+              border="1px solid #3C50E0"
+              background="transparent"
+              color="#3C50E0"
+              radius="4px"
+              width="15%"
+              padding="10px"
             >
               Download Invoice
-            </button>
-            <button
-              style={{
-                backgroundColor: "#3C50E0",
-                border: "1px solid #3C50E0",
-                borderRadius: "4px",
-                color: "#EFF4FB",
-                padding: "10px 25px",
-                margin: "0",
-              }}
+            </Button>
+            <Button
+              border="0"
+              background="#3C50E0"
+              radius="4px"
+              width="12%"
+              padding="10px"
             >
               Send Invoice
-            </button>
+            </Button>
           </div>
         </div>
       </WhiteCard>

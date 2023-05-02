@@ -3,6 +3,7 @@ import WhiteCard from "../Cards.js/WhiteCard";
 import Person from "../../assets/icons/Photo.png";
 import { FileUploader } from "react-drag-drop-files";
 import "../styles/Settings.css";
+import { Button } from "../shared/Button";
 
 const fileTypes = ["JPG", "PNG", "GIF"];
 
@@ -185,30 +186,25 @@ export const Settings = () => {
                 marginRight: "4%",
               }}
             >
-              <button
-                style={{
-                  background: "transparent",
-                  border: "1px solid #E2E8F0",
-                  borderRadius: "4px",
-                  color: "#1C2434",
-                  padding: "10px 25px",
-                  margin: "0",
-                }}
+              <Button
+                background="transparent"
+                color="#1C2434"
+                border="1px solid #E2E8F0"
+                width="20%"
+                padding="8px"
+                radius="4px"
               >
                 Cancel
-              </button>
-              <button
-                style={{
-                  backgroundColor: "#3C50E0",
-                  border: "1px solid #3C50E0",
-                  borderRadius: "4px",
-                  color: "#EFF4FB",
-                  padding: "10px 25px",
-                  margin: "0",
-                }}
+              </Button>
+              <Button
+                background="#3C50E0"
+                border="0"
+                width="15%"
+                padding="8px"
+                radius="4px"
               >
                 Save
-              </button>
+              </Button>
             </div>
           </div>
         </div>
@@ -270,34 +266,30 @@ export const Settings = () => {
                   style={{
                     display: "flex",
                     flexDirection: "row",
-                    gap: "5%",
+                    gap: "10%",
                     justifyContent: "flex-start",
                     width: "40%",
                     marginLeft: "4%",
                   }}
                 >
-                  <button
-                    style={{
-                      border: "none",
-                      background: "transparent",
-                      color: "#64748B",
-                      width: "fit-content",
-                      padding: "0 ",
-                    }}
+                  <Button
+                    background="transparent"
+                    border="0"
+                    color="#64748B"
+                    width="40%"
+                    radius="4px"
                   >
-                    Delete
-                  </button>
-                  <button
-                    style={{
-                      border: "none",
-                      background: "transparent",
-                      color: "#3C50E0",
-                      width: "fit-content",
-                      padding: "0 ",
-                    }}
+                    Save
+                  </Button>
+                  <Button
+                    background="transparent"
+                    border="0"
+                    color="#3C50E0"
+                    width="50%"
+                    radius="4px"
                   >
                     Update
-                  </button>
+                  </Button>
                 </span>
               </div>
             </div>
@@ -318,30 +310,25 @@ export const Settings = () => {
                 marginRight: "4%",
               }}
             >
-              <button
-                style={{
-                  background: "transparent",
-                  border: "1px solid #E2E8F0",
-                  borderRadius: "4px",
-                  color: "#1C2434",
-                  padding: "10px 25px",
-                  margin: "0",
-                }}
+              <Button
+                background="transparent"
+                color="#1C2434"
+                border="1px solid #E2E8F0"
+                width="25%"
+                padding="8px"
+                radius="4px"
               >
                 Cancel
-              </button>
-              <button
-                style={{
-                  backgroundColor: "#3C50E0",
-                  border: "1px solid #3C50E0",
-                  borderRadius: "4px",
-                  color: "#EFF4FB",
-                  padding: "10px 25px",
-                  margin: "0",
-                }}
+              </Button>
+              <Button
+                background="#3C50E0"
+                border="0"
+                width="20%"
+                padding="8px"
+                radius="4px"
               >
                 Save
-              </button>
+              </Button>
             </div>
           </div>
         </div>

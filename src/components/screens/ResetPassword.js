@@ -2,6 +2,7 @@ import React from "react";
 import WhiteCard from "../Cards.js/WhiteCard";
 import DarkLogo from "../../assets/icons/DarkLogo.png";
 import UserPhone from "../../assets/icons/UserPhone.png";
+import { Button } from "../shared/Button";
 
 export const ResetPassword = () => {
   return (
@@ -100,18 +101,15 @@ export const ResetPassword = () => {
                 }}
               ></input>
 
-              <button
-                style={{
-                  width: "112%",
-                  padding: "20px",
-                  borderRadius: "8px",
-                  backgroundColor: "#3056D3",
-                  border: "0",
-                  color: "#ffff",
-                }}
+              <Button
+                width="110%"
+                padding="17px"
+                background="#3056D3"
+                border="0"
+                radius="8px"
               >
                 Send Password Reset Link
-              </button>
+              </Button>
             </div>
           </div>
         </div>
