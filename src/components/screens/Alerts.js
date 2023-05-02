@@ -8,11 +8,11 @@ export const Alerts = () => {
   return (
     <div
       style={{
-        width: "70%",
-        marginTop: "5%",
+        width: "100%",
+        marginTop: "10%",
       }}
     >
-      <WhiteCard height="80%" size="100%">
+      <WhiteCard height="85%" size="100%">
         <div
           style={{
             padding: "30px",

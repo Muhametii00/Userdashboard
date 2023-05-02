@@ -12,11 +12,11 @@ export const Buttons = () => {
   return (
     <div
       style={{
-        width: "76%",
+        width: "100%",
         rowGap: "5%",
         display: "flex",
         flexDirection: "column",
-        marginTop: "5%",
+        marginTop: "10%",
         marginBottom: "10%",
       }}
     >

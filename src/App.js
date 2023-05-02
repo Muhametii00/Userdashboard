@@ -1,6 +1,7 @@
 import "./App.css";
 import { Routes } from "./Navigation/Routes";
 import { Sidebar } from "./components/Sidebar";
+import { Topbar } from "./components/Topbar";
 
 function App() {
   return (
@@ -13,7 +14,16 @@ function App() {
       }}
     >
       <Sidebar />
-      <Routes />
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          width: "74%",
+        }}
+      >
+        <Topbar />
+        <Routes />
+      </div>
     </div>
   );
 }

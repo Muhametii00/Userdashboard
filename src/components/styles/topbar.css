@@ -1,11 +1,12 @@
 .topbar-container {
   display: flex;
   align-items: center;
-  width: 100%;
-  left: 0px;
-  top: 0px;
+  justify-content: space-between;
+  width: 82%;
+  position: absolute;
   border-radius: 0px;
-  background-color: lightgrey;
+  background-color: #ffff;
+  left: 18%;
 }
 .search-engine {
   display: flex;
@@ -15,5 +16,45 @@
 }
 .search-engine input {
   border: none;
-  padding: 25px 25px;
+  margin: 15px 15px;
+  padding: 10px 10px;
+}
+.right-side {
+  width: 30%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10%;
+}
+.notifications {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 15%;
+}
+.profile-name {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 12%;
+}
+.profile-name p {
+  margin: 0;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #212b36;
+}
+.profile {
+  width: 25%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 30%;
 }

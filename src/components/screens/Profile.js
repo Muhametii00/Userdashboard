@@ -14,8 +14,8 @@ export const Profile = () => {
   return (
     <div
       style={{
-        width: "74%",
-        marginTop: "3%",
+        width: "100%",
+        marginTop: "10%",
         marginBottom: "5%",
       }}
     >

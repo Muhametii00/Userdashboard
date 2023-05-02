@@ -8,8 +8,8 @@ export const Timetable = () => {
   return (
     <div
       style={{
-        width: "74%",
-        marginTop: "3%",
+        width: "100%",
+        marginTop: "10%",
       }}
     >
       <WhiteCard height="75%" size="100%">

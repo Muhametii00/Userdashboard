@@ -15,12 +15,12 @@ export const Settings = () => {
   return (
     <div
       style={{
-        width: "76%",
+        width: "100%",
         columnGap: "5%",
         display: "flex",
         flexDirection: "row",
-        marginTop: "5%",
-        marginBottom: "10%",
+        marginTop: "10%",
+        marginBottom: "5%",
       }}
     >
       <WhiteCard height="100%" size="50%">

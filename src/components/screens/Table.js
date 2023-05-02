@@ -21,12 +21,12 @@ export const Table = () => {
   return (
     <div
       style={{
-        width: "76%",
+        width: "100%",
         rowGap: "5%",
         display: "flex",
         flexDirection: "column",
-        marginTop: "5%",
-        marginBottom: "15%",
+        marginTop: "10%",
+        marginBottom: "18%",
       }}
     >
       <WhiteCard height="100%" size="95%">

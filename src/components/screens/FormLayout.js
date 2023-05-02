@@ -5,11 +5,11 @@ export const FormLayout = () => {
   return (
     <div
       style={{
-        width: "76%",
+        width: "100%",
         columnGap: "10%",
         display: "flex",
         flexDirection: "row",
-        marginTop: "5%",
+        marginTop: "10%",
         marginBottom: "10%",
       }}
     >

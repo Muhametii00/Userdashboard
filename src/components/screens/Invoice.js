@@ -7,11 +7,11 @@ export const Invoice = () => {
   return (
     <div
       style={{
-        width: "70%",
-        marginTop: "5%",
+        width: "100%",
+        marginTop: "10%",
       }}
     >
-      <WhiteCard height="93%" size="100%">
+      <WhiteCard height="98%" size="100%">
         <div style={{ padding: "5px 25px" }}>
           <div
             style={{

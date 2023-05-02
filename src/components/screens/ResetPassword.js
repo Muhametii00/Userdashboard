@@ -5,7 +5,7 @@ import UserPhone from "../../assets/icons/UserPhone.png";
 
 export const ResetPassword = () => {
   return (
-    <div style={{ width: "70%", marginTop: "3%", marginBottom: "3%" }}>
+    <div style={{ width: "100%", marginTop: "10%", marginBottom: "3%" }}>
       <WhiteCard height="100%" size="100%">
         <div
           style={{

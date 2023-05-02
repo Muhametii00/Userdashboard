@@ -6,7 +6,7 @@ import Google from "../../assets/icons/Google.png";
 
 export const SignUp = () => {
   return (
-    <div style={{ width: "70%", marginTop: "3%", marginBottom: "3%" }}>
+    <div style={{ width: "100%", marginTop: "10%", marginBottom: "5%" }}>
       <WhiteCard height="100%" size="100%">
         <div
           style={{

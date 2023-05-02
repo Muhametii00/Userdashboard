@@ -7,12 +7,12 @@ export const Formelement = () => {
   return (
     <div
       style={{
-        width: "76%",
+        width: "100%",
         columnGap: "10%",
         display: "flex",
         flexDirection: "row",
-        marginTop: "5%",
-        marginBottom: "10%",
+        marginTop: "10%",
+        marginBottom: "15%",
       }}
     >
       <div
