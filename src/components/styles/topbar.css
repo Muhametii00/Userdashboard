@@ -14,13 +14,13 @@
   margin-left: 40px;
 }
 
-.search-engine input:focus {
-  outline: none;
-}
 .search-engine input {
   border: none;
   margin: 15px 15px;
   padding: 10px 10px;
+}
+.search-engine input:focus {
+  outline: none;
 }
 .right-side {
   width: 30%;
