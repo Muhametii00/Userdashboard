@@ -11,8 +11,11 @@
 .search-engine {
   display: flex;
   align-items: center;
-  gap: 5px;
   margin-left: 40px;
+}
+
+.search-engine input:focus {
+  outline: none;
 }
 .search-engine input {
   border: none;
