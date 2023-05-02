@@ -42,7 +42,6 @@
   margin-top: 10px;
 }
 .nav {
-  color: #8a99af;
   list-style: none;
 }
 .nav li {
@@ -56,6 +55,12 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
-  color: #dee4ee;
+  color: #8a99af;
   text-decoration: none;
+}
+.nav li a:focus {
+  color: #ffff;
+}
+.nav li a:hover {
+  color: #ffff;
 }
