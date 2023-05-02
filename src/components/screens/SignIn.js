@@ -7,12 +7,13 @@ import Google from "../../assets/icons/Google.png";
 export const SignIn = () => {
   return (
     <div style={{ width: "100%", marginTop: "10%" }}>
-      <WhiteCard height="95%" size="100%">
+      <WhiteCard height="92%" size="100%">
         <div
           style={{
             width: "100%",
             display: "flex",
             flexDirection: "row",
+            marginBottom: "5%",
           }}
         >
           <div
