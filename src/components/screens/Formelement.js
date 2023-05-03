@@ -3,8 +3,13 @@ import "../styles/Formelement.css";
 import WhiteCard from "../Cards.js/WhiteCard";
 import Switch from "@mui/material/Switch";
 import { Colors } from "../../assets/helpers/Colors";
+import { useLocation } from "react-router-dom";
 
 export const Formelement = () => {
+  const location = useLocation();
+  const selectedItems = location.state.selectedItems;
+
+  console.log(selectedItems);
   return (
     <div
       style={{

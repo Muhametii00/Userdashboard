@@ -14,30 +14,15 @@ import { Button } from "../shared/Button";
 import { useNavigate } from "react-router-dom";
 
 export const Profile = () => {
-  const [facebook, setFacebook] = useState(false);
-  const [twitter, setTwitter] = useState(false);
-  const [linkedIn, setLinkedIn] = useState(false);
-  const [dribble, setDribble] = useState(false);
-  const [github, setGithub] = useState(false);
   const navigate = useNavigate();
-  const handlefacebook = () => {
-    setFacebook(!facebook);
-  };
-  const handletwitter = () => {
-    setTwitter(!twitter);
-  };
-  const handlelinkedIn = () => {
-    setLinkedIn(!linkedIn);
-  };
-  const handledribble = () => {
-    setDribble(!dribble);
-  };
-  const handlegithub = () => {
-    setGithub(!github);
+
+  const [selectedItems, setSelectedItems] = useState("");
+  const selectedItem = (value) => {
+    setSelectedItems(value);
   };
 
   const handleClick = () => {
-    navigate("/form-element");
+    navigate("/form-element", { state: { selectedItems } });
   };
   return (
     <div
@@ -278,23 +263,41 @@ export const Profile = () => {
                 gap: "15%",
               }}
             >
-              <div onClick={handlefacebook}>
+              <div onClick={() => selectedItem("Facebook")}>
                 <FacebookIcon
                   id="Facebook"
-                  color={facebook ? Colors.primary : Colors.grey}
+                  color={
+                    selectedItems === "Facebook" ? Colors.primary : Colors.grey
+                  }
                 />
               </div>
-              <div onClick={handletwitter}>
-                <TwitterIcon color={twitter ? Colors.primary : Colors.grey} />
+              <div onClick={() => selectedItem("Twitter")}>
+                <TwitterIcon
+                  color={
+                    selectedItems === "Twitter" ? Colors.primary : Colors.grey
+                  }
+                />
               </div>
-              <div onClick={handlelinkedIn}>
-                <LinkedInIcon color={linkedIn ? Colors.primary : Colors.grey} />
+              <div onClick={() => selectedItem("LinkedIn")}>
+                <LinkedInIcon
+                  color={
+                    selectedItems === "LinkedIn" ? Colors.primary : Colors.grey
+                  }
+                />
               </div>
-              <div onClick={handledribble}>
-                <DribbleIcon color={dribble ? Colors.primary : Colors.grey} />
+              <div onClick={() => selectedItem("Dribble")}>
+                <DribbleIcon
+                  color={
+                    selectedItems === "Dribble" ? Colors.primary : Colors.grey
+                  }
+                />
               </div>
-              <div onClick={handlegithub}>
-                <GithubIcon color={github ? Colors.primary : Colors.grey} />
+              <div onClick={() => selectedItem("Github")}>
+                <GithubIcon
+                  color={
+                    selectedItems === "Github" ? Colors.primary : Colors.grey
+                  }
+                />
               </div>
             </span>
           </div>
