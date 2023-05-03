@@ -10,6 +10,7 @@ export const Button = ({
   color = "#ffff",
   cursor = "pointer",
   bottom = "",
+  onClick,
 }) => {
   return (
     <button
@@ -23,6 +24,7 @@ export const Button = ({
         cursor: cursor,
         marginBottom: bottom,
       }}
+      onClick={onClick}
     >
       {children}
     </button>

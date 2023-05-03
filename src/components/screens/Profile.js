@@ -1,26 +1,53 @@
-import React from "react";
+import React, { useState } from "react";
 import WhiteCard from "../Cards.js/WhiteCard";
 import "../styles/Profile.css";
 import ProfileCover from "../../assets/photos/profileCover.png";
 import Profilepic from "../../assets/photos/ProfilePicture.png";
-import FacebookIcon from "../../assets/icons/FacebookIcon.png";
-import TwitterIcon from "../../assets/icons/TwitterIcon.png";
-import LinkedinIcon from "../../assets/icons/LinkedinIcon.png";
-import DribbleIcon from "../../assets/icons/DribbleIcon.png";
-import GithubIcon from "../../assets/icons/GithubIcon.png";
+import { FacebookIcon } from "../../assets/icons/FacebookIcon";
+import { TwitterIcon } from "../../assets/icons/TwitterIcon";
+import { LinkedInIcon } from "../../assets/icons/LinkedInIcon";
+import { DribbleIcon } from "../../assets/icons/DribbleIcon";
+import { GithubIcon } from "../../assets/icons/GithubIcon";
 import camera from "../../assets/icons/camera.png";
 import { Colors } from "../../assets/helpers/Colors";
+import { Button } from "../shared/Button";
+import { useNavigate } from "react-router-dom";
 
 export const Profile = () => {
+  const [facebook, setFacebook] = useState(false);
+  const [twitter, setTwitter] = useState(false);
+  const [linkedIn, setLinkedIn] = useState(false);
+  const [dribble, setDribble] = useState(false);
+  const [github, setGithub] = useState(false);
+  const navigate = useNavigate();
+  const handlefacebook = () => {
+    setFacebook(!facebook);
+  };
+  const handletwitter = () => {
+    setTwitter(!twitter);
+  };
+  const handlelinkedIn = () => {
+    setLinkedIn(!linkedIn);
+  };
+  const handledribble = () => {
+    setDribble(!dribble);
+  };
+  const handlegithub = () => {
+    setGithub(!github);
+  };
+
+  const handleClick = () => {
+    navigate("/form-element");
+  };
   return (
     <div
       style={{
         width: "100%",
         marginTop: "10%",
-        marginBottom: "5%",
+        marginBottom: "7%",
       }}
     >
-      <WhiteCard height="100%" size="100%">
+      <WhiteCard height="95%" size="100%">
         <div className="profile-container">
           <div className="cover-photo">
             <img src={ProfileCover} alt="Profile Cover" />
@@ -248,19 +275,43 @@ export const Profile = () => {
                 flexDirection: "row",
                 alignItems: "center",
                 justifyContent: "center",
-                gap: "25%",
-                marginBottom: "3%",
+                gap: "15%",
               }}
             >
-              <img src={FacebookIcon} alt="Facebook" />
-              <img src={TwitterIcon} alt="Twitter" />
-              <img src={LinkedinIcon} alt="Linkedin" />
-              <img src={DribbleIcon} alt="Dribble" />
-              <img src={GithubIcon} alt="Github" />
+              <div onClick={handlefacebook}>
+                <FacebookIcon
+                  id="Facebook"
+                  color={facebook ? Colors.primary : Colors.grey}
+                />
+              </div>
+              <div onClick={handletwitter}>
+                <TwitterIcon color={twitter ? Colors.primary : Colors.grey} />
+              </div>
+              <div onClick={handlelinkedIn}>
+                <LinkedInIcon color={linkedIn ? Colors.primary : Colors.grey} />
+              </div>
+              <div onClick={handledribble}>
+                <DribbleIcon color={dribble ? Colors.primary : Colors.grey} />
+              </div>
+              <div onClick={handlegithub}>
+                <GithubIcon color={github ? Colors.primary : Colors.grey} />
+              </div>
             </span>
           </div>
         </div>
       </WhiteCard>
+      <div style={{ float: "right", marginTop: "3%", marginRight: "3%" }}>
+        <Button
+          onClick={handleClick}
+          background={Colors.primary}
+          padding="15px"
+          border="0"
+          radius="4px"
+          width="160%"
+        >
+          Next
+        </Button>
+      </div>
     </div>
   );
 };
