@@ -9,6 +9,7 @@ import LinkedinIcon from "../../assets/icons/LinkedinIcon.png";
 import DribbleIcon from "../../assets/icons/DribbleIcon.png";
 import GithubIcon from "../../assets/icons/GithubIcon.png";
 import camera from "../../assets/icons/camera.png";
+import { Colors } from "../../assets/helpers/Colors";
 
 export const Profile = () => {
   return (
@@ -23,7 +24,7 @@ export const Profile = () => {
         <div className="profile-container">
           <div className="cover-photo">
             <img src={ProfileCover} alt="Profile Cover" />
-            <button>
+            <button style={{ backgroundColor: Colors.primary }}>
               <img src={camera} alt="Camera" />
               <p>Edit</p>
             </button>
@@ -39,7 +40,7 @@ export const Profile = () => {
               style={{
                 width: "30px",
                 height: "30px",
-                backgroundColor: "#3C50E0",
+                backgroundColor: Colors.primary,
                 borderRadius: "50%",
                 position: "absolute",
                 textAlign: "center",

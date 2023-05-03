@@ -16,6 +16,7 @@ import Pending from "../../assets/icons/Pending.png";
 import Eye from "../../assets/icons/Eye.png";
 import Bin from "../../assets/icons/Bin.png";
 import Download from "../../assets/icons/Download.png";
+import { Colors } from "../../assets/helpers/Colors";
 
 export const Table = () => {
   return (
@@ -53,9 +54,9 @@ export const Table = () => {
                 Google
               </th>
               <td>3.5K</td>
-              <td style={{ color: "#10B981" }}>$5,768</td>
+              <td style={{ color: Colors.green }}>$5,768</td>
               <td>590</td>
-              <td style={{ color: "#259AE6" }}>4.8%</td>
+              <td style={{ color: Colors.lightblue }}>4.8%</td>
             </tr>
             <tr>
               <th>
@@ -63,9 +64,9 @@ export const Table = () => {
                 Twitter
               </th>
               <td>2.2K</td>
-              <td style={{ color: "#10B981" }}>$4,635</td>
+              <td style={{ color: Colors.green }}>$4,635</td>
               <td>467</td>
-              <td style={{ color: "#259AE6" }}>4.3%</td>
+              <td style={{ color: Colors.lightblue }}>4.3%</td>
             </tr>
             <tr>
               <th>
@@ -73,9 +74,9 @@ export const Table = () => {
                 Github
               </th>
               <td>2.1K</td>
-              <td style={{ color: "#10B981" }}>$4,290</td>
+              <td style={{ color: Colors.green }}>$4,290</td>
               <td>420</td>
-              <td style={{ color: "#259AE6" }}>3.7%</td>
+              <td style={{ color: Colors.lightblue }}>3.7%</td>
             </tr>
             <tr>
               <th>
@@ -83,9 +84,9 @@ export const Table = () => {
                 Vimeo
               </th>
               <td>1.5K</td>
-              <td style={{ color: "#10B981" }}>$3,580</td>
+              <td style={{ color: Colors.green }}>$3,580</td>
               <td>389</td>
-              <td style={{ color: "#259AE6" }}>2.5%</td>
+              <td style={{ color: Colors.lightblue }}>2.5%</td>
             </tr>
             <tr>
               <th>
@@ -93,9 +94,9 @@ export const Table = () => {
                 Facebook
               </th>
               <td>1.2K</td>
-              <td style={{ color: "#10B981" }}>$2,740</td>
+              <td style={{ color: Colors.green }}>$2,740</td>
               <td>230</td>
-              <td style={{ color: "#259AE6" }}>1.9%</td>
+              <td style={{ color: Colors.lightblue }}>1.9%</td>
             </tr>
           </table>
         </div>
@@ -127,7 +128,7 @@ export const Table = () => {
               <td>Electronics</td>
               <td>$269</td>
               <td>22</td>
-              <td style={{ color: "#10B981" }}>$45</td>
+              <td style={{ color: Colors.green }}>$45</td>
             </tr>
             <tr>
               <th>
@@ -137,7 +138,7 @@ export const Table = () => {
               <td>Electronics</td>
               <td>$546</td>
               <td>34</td>
-              <td style={{ color: "#10B981" }}>$125</td>
+              <td style={{ color: Colors.green }}>$125</td>
             </tr>
             <tr>
               <th>
@@ -147,7 +148,7 @@ export const Table = () => {
               <td>Electronics</td>
               <td>$443</td>
               <td>64</td>
-              <td style={{ color: "#10B981" }}>$247</td>
+              <td style={{ color: Colors.green }}>$247</td>
             </tr>
             <tr>
               <th>
@@ -157,7 +158,7 @@ export const Table = () => {
               <td>Electronics</td>
               <td>$499</td>
               <td>72</td>
-              <td style={{ color: "#10B981" }}>$103</td>
+              <td style={{ color: Colors.green }}>$103</td>
             </tr>
           </table>
         </div>

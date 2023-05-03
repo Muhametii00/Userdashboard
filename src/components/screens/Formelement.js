@@ -2,6 +2,7 @@ import React from "react";
 import "../styles/Formelement.css";
 import WhiteCard from "../Cards.js/WhiteCard";
 import Switch from "@mui/material/Switch";
+import { Colors } from "../../assets/helpers/Colors";
 
 export const Formelement = () => {
   return (
@@ -38,7 +39,7 @@ export const Formelement = () => {
               <p
                 style={{
                   padding: "15px 20px",
-                  borderBottom: "1px solid #E2E8F0",
+                  borderBottom: `1.5px solid ${Colors.stroke}`,
                   margin: "0px",
                 }}
               >
@@ -61,9 +62,9 @@ export const Formelement = () => {
               <input
                 placeholder="Default input text!"
                 style={{
-                  border: "1.5px solid #E2E8F0",
+                  border: `1.5px solid ${Colors.stroke}`,
                   borderRadius: "4px",
-                  color: "#64748B",
+                  color: Colors.lightgrey,
                   width: "90%",
                   padding: "15px",
                 }}
@@ -71,7 +72,7 @@ export const Formelement = () => {
 
               <p
                 style={{
-                  color: "#1C2434",
+                  color: Colors.black,
                   fontSize: "14px",
                   fontWeight: "500",
                   lineHeight: "22px",
@@ -84,9 +85,9 @@ export const Formelement = () => {
               <input
                 placeholder="Active input text!"
                 style={{
-                  border: "1.5px solid #3056D3",
+                  border: `1px solid ${Colors.primary}`,
                   borderRadius: "4px",
-                  color: "#64748B",
+                  color: Colors.lightgrey,
                   width: "90%",
                   padding: "15px",
                 }}
@@ -94,7 +95,7 @@ export const Formelement = () => {
 
               <p
                 style={{
-                  color: "#1C2434",
+                  color: Colors.black,
                   fontSize: "14px",
                   fontWeight: "500",
                   lineHeight: "22px",
@@ -108,12 +109,12 @@ export const Formelement = () => {
                 disabled
                 placeholder="Disabled input text!"
                 style={{
-                  border: "1.5px solid #E2E8F0",
+                  border: `1px solid ${Colors.stroke}`,
                   borderRadius: "4px",
-                  color: "#64748B",
+                  color: Colors.lightgrey,
                   width: "90%",
                   padding: "15px",
-                  backgroundColor: "#EFF4FB",
+                  backgroundColor: Colors.stroke,
                 }}
               ></input>
             </div>
@@ -122,7 +123,7 @@ export const Formelement = () => {
         <WhiteCard height="57%" size="100%">
           <div
             style={{
-              color: "#1C2434",
+              color: Colors.black,
               fontSize: "16px",
               fontWeight: "500",
               lineHeight: "24px",
@@ -198,7 +199,7 @@ export const Formelement = () => {
         <WhiteCard height="57%" size="100%">
           <div
             style={{
-              color: "#1C2434",
+              color: Colors.black,
               fontSize: "16px",
               fontWeight: "500",
               lineHeight: "24px",
@@ -210,7 +211,7 @@ export const Formelement = () => {
               <p
                 style={{
                   padding: "15px 20px",
-                  borderBottom: "1px solid #E2E8F0",
+                  borderBottom: `1px solid ${Colors.stroke}`,
                   margin: "0px",
                 }}
               >
@@ -220,7 +221,7 @@ export const Formelement = () => {
             <div style={{ padding: "20px 20px" }}>
               <p
                 style={{
-                  color: "#1C2434",
+                  color: Colors.black,
                   fontSize: "14px",
                   fontWeight: "500",
                   lineHeight: "22px",
@@ -236,9 +237,9 @@ export const Formelement = () => {
                 type="date"
                 name="date"
                 style={{
-                  border: "1.5px solid #3056D3",
+                  border: `1px solid ${Colors.stroke}`,
                   borderRadius: "4px",
-                  color: "#64748B",
+                  color: Colors.lightgrey,
                   width: "90%",
                   padding: "15px",
                 }}
@@ -246,7 +247,7 @@ export const Formelement = () => {
 
               <p
                 style={{
-                  color: "#1C2434",
+                  color: Colors.black,
                   fontSize: "14px",
                   fontWeight: "500",
                   lineHeight: "22px",
@@ -260,9 +261,9 @@ export const Formelement = () => {
                 placeholder="dd/mm/yyyy"
                 type="date"
                 style={{
-                  border: "1.5px solid #3056D3",
+                  border: `1px solid ${Colors.stroke}`,
                   borderRadius: "4px",
-                  color: "#64748B",
+                  color: Colors.lightgrey,
                   width: "90%",
                   padding: "15px",
                 }}
@@ -273,7 +274,7 @@ export const Formelement = () => {
         <WhiteCard height="57%" size="100%">
           <div
             style={{
-              color: "#1C2434",
+              color: Colors.black,
               fontSize: "16px",
               fontWeight: "500",
               lineHeight: "24px",
@@ -285,7 +286,7 @@ export const Formelement = () => {
               <p
                 style={{
                   padding: "15px 20px",
-                  borderBottom: "1px solid #E2E8F0",
+                  borderBottom: `1px solid ${Colors.stroke}`,
                   margin: "0px",
                 }}
               >
@@ -295,7 +296,7 @@ export const Formelement = () => {
             <div style={{ padding: "20px 20px" }}>
               <p
                 style={{
-                  color: "#1C2434",
+                  color: Colors.black,
                   fontSize: "14px",
                   fontWeight: "500",
                   lineHeight: "22px",
@@ -311,7 +312,7 @@ export const Formelement = () => {
 
               <p
                 style={{
-                  color: "#1C2434",
+                  color: Colors.black,
                   fontSize: "14px",
                   fontWeight: "500",
                   lineHeight: "22px",
@@ -339,7 +340,7 @@ export const Formelement = () => {
         <WhiteCard height="45 %" size="100%">
           <div
             style={{
-              color: "#1C2434",
+              color: Colors.black,
               fontSize: "16px",
               fontWeight: "500",
               lineHeight: "24px",
@@ -351,7 +352,7 @@ export const Formelement = () => {
               <p
                 style={{
                   padding: "15px 20px",
-                  borderBottom: "1px solid #E2E8F0",
+                  borderBottom: `1px solid ${Colors.stroke}`,
                   margin: "0px",
                 }}
               >
@@ -361,7 +362,7 @@ export const Formelement = () => {
             <div style={{ padding: "20px 20px" }}>
               <p
                 style={{
-                  color: "#1C2434",
+                  color: Colors.black,
                   fontSize: "14px",
                   fontWeight: "500",
                   lineHeight: "22px",
@@ -374,9 +375,9 @@ export const Formelement = () => {
               <input
                 placeholder="Default input text!"
                 style={{
-                  border: "1.5px solid #E2E8F0",
+                  border: `1px solid ${Colors.stroke}`,
                   borderRadius: "4px",
-                  color: "#64748B",
+                  color: Colors.lightgrey,
                   width: "90%",
                   padding: "15px",
                   paddingBottom: "20%",
@@ -385,7 +386,7 @@ export const Formelement = () => {
 
               <p
                 style={{
-                  color: "#1C2434",
+                  color: Colors.black,
                   fontSize: "14px",
                   fontWeight: "500",
                   lineHeight: "22px",
@@ -398,7 +399,7 @@ export const Formelement = () => {
               <input
                 placeholder="Active input text!"
                 style={{
-                  border: "1.5px solid #3056D3",
+                  border: `1px solid ${Colors.primary}`,
                   borderRadius: "4px",
                   color: "#64748B",
                   width: "90%",
@@ -409,7 +410,7 @@ export const Formelement = () => {
 
               <p
                 style={{
-                  color: "#1C2434",
+                  color: Colors.black,
                   fontSize: "14px",
                   fontWeight: "500",
                   lineHeight: "22px",
@@ -423,13 +424,13 @@ export const Formelement = () => {
                 disabled
                 placeholder="Disabled input text!"
                 style={{
-                  border: "1.5px solid #E2E8F0",
+                  border: `1px solid ${Colors.stroke}`,
                   borderRadius: "4px",
-                  color: "#64748B",
+                  color: Colors.lightgrey,
                   width: "90%",
                   padding: "15px",
                   paddingBottom: "20%",
-                  backgroundColor: "#EFF4FB",
+                  backgroundColor: Colors.stroke,
                 }}
               ></input>
             </div>
@@ -438,7 +439,7 @@ export const Formelement = () => {
         <WhiteCard height="37%" size="100%">
           <div
             style={{
-              color: "#1C2434",
+              color: Colors.black,
               fontSize: "16px",
               fontWeight: "500",
               lineHeight: "24px",
@@ -450,7 +451,7 @@ export const Formelement = () => {
               <p
                 style={{
                   padding: "15px 20px",
-                  borderBottom: "1px solid #E2E8F0",
+                  borderBottom: `1px solid ${Colors.stroke}`,
                   margin: "0px",
                 }}
               >
@@ -472,7 +473,7 @@ export const Formelement = () => {
                     fontWeight: "500",
                     fontSize: "14px",
                     lineHeight: "22px",
-                    color: "#64748B",
+                    color: Colors.black,
                   }}
                 >
                   <input type="checkbox" />
@@ -484,7 +485,7 @@ export const Formelement = () => {
                     fontWeight: "500",
                     fontSize: "14px",
                     lineHeight: "22px",
-                    color: "#64748B",
+                    color: Colors.black,
                   }}
                 >
                   <input checked type="checkbox" />
@@ -505,7 +506,7 @@ export const Formelement = () => {
                     fontWeight: "500",
                     fontSize: "14px",
                     lineHeight: "22px",
-                    color: "#64748B",
+                    color: Colors.black,
                   }}
                 >
                   <input type="checkbox" />
@@ -517,7 +518,7 @@ export const Formelement = () => {
                     fontWeight: "500",
                     fontSize: "14px",
                     lineHeight: "22px",
-                    color: "#64748B",
+                    color: Colors.black,
                   }}
                 >
                   <input checked type="checkbox" />
@@ -538,7 +539,7 @@ export const Formelement = () => {
                     fontWeight: "500",
                     fontSize: "14px",
                     lineHeight: "22px",
-                    color: "#64748B",
+                    color: Colors.black,
                   }}
                 >
                   <input type="checkbox" />
@@ -550,7 +551,7 @@ export const Formelement = () => {
                     fontWeight: "500",
                     fontSize: "14px",
                     lineHeight: "22px",
-                    color: "#64748B",
+                    color: Colors.black,
                   }}
                 >
                   <input checked type="checkbox" />
@@ -571,7 +572,7 @@ export const Formelement = () => {
                     fontWeight: "500",
                     fontSize: "14px",
                     lineHeight: "22px",
-                    color: "#1C2434;",
+                    color: Colors.black,
                   }}
                 >
                   <input type="radio" />
@@ -583,7 +584,7 @@ export const Formelement = () => {
                     fontWeight: "500",
                     fontSize: "14px",
                     lineHeight: "22px",
-                    color: "#1C2434;",
+                    color: Colors.black,
                   }}
                 >
                   <input checked type="radio" />
@@ -604,7 +605,7 @@ export const Formelement = () => {
                     fontWeight: "500",
                     fontSize: "14px",
                     lineHeight: "22px",
-                    color: "#1C2434;",
+                    color: Colors.black,
                   }}
                 >
                   <input type="radio" />
@@ -616,7 +617,7 @@ export const Formelement = () => {
                     fontWeight: "500",
                     fontSize: "14px",
                     lineHeight: "22px",
-                    color: "#1C2434;",
+                    color: Colors.black,
                   }}
                 >
                   <input checked type="radio" />
@@ -629,7 +630,7 @@ export const Formelement = () => {
         <WhiteCard height="37%" size="100%">
           <div
             style={{
-              color: "#1C2434",
+              color: Colors.black,
               fontSize: "16px",
               fontWeight: "500",
               lineHeight: "24px",
@@ -641,7 +642,7 @@ export const Formelement = () => {
               <p
                 style={{
                   padding: "15px 20px",
-                  borderBottom: "1px solid #E2E8F0",
+                  borderBottom: `1px solid ${Colors.stroke}`,
                   margin: "0px",
                 }}
               >
@@ -651,7 +652,7 @@ export const Formelement = () => {
             <div style={{ padding: "20px 20px" }}>
               <p
                 style={{
-                  color: "#1C2434",
+                  color: Colors.black,
                   fontSize: "14px",
                   fontWeight: "500",
                   lineHeight: "22px",
@@ -663,9 +664,9 @@ export const Formelement = () => {
               </p>
               <select
                 style={{
-                  border: "1.5px solid #E2E8F0",
+                  border: `1px solid ${Colors.stroke}`,
                   borderRadius: "4px",
-                  color: "#64748B",
+                  color: Colors.lightgrey,
                   fontSize: "16px",
                   lineHeight: "24px",
                   width: "97%",
@@ -704,7 +705,7 @@ export const Formelement = () => {
 
               <p
                 style={{
-                  color: "#1C2434",
+                  color: Colors.black,
                   fontSize: "14px",
                   fontWeight: "500",
                   lineHeight: "22px",
@@ -716,9 +717,9 @@ export const Formelement = () => {
               </p>
               <select
                 style={{
-                  border: "1.5px solid #E2E8F0",
+                  border: `1px solid ${Colors.stroke}`,
                   borderRadius: "4px",
-                  color: "#64748B",
+                  color: Colors.lightgrey,
                   fontSize: "16px",
                   lineHeight: "24px",
                   width: "97%",
