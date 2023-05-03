@@ -13,7 +13,9 @@ import { Link } from "react-router-dom";
 export const Sidebar = () => {
   return (
     <div className="container">
-      <img className="logo" src={Logo} alt="Logo" />
+      <Link to="/">
+        <img className="logo" src={Logo} alt="Logo" />
+      </Link>
       <h2 className="container-home">Home</h2>
       <ul className="nav">
         <li>
