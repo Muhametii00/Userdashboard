@@ -1,8 +1,14 @@
 import React from "react";
 import WhiteCard from "../Cards.js/WhiteCard";
 import { Button } from "../shared/Button";
+import { useLocation } from "react-router-dom";
 
 export const FormLayout = () => {
+  const location = useLocation();
+
+  const inputValue = location.state.inputValue;
+
+  console.log(inputValue);
   return (
     <div
       style={{

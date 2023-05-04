@@ -1,15 +1,40 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/Formelement.css";
 import WhiteCard from "../Cards.js/WhiteCard";
 import Switch from "@mui/material/Switch";
 import { Colors } from "../../assets/helpers/Colors";
 import { useLocation } from "react-router-dom";
+import { Button } from "../shared/Button";
+import { useNavigate } from "react-router-dom";
+import FormControlLabel from "@mui/material/FormControlLabel";
 
 export const Formelement = () => {
+  const navigate = useNavigate();
   const location = useLocation();
-  const selectedItems = location.state.selectedItems;
 
-  console.log(selectedItems);
+  const selectedItems = location.state.selectedItems;
+  const initialValues = {
+    selectedItems,
+    breakfast: "",
+    lunch: "",
+    menu: "",
+    summer: "",
+    winter: "",
+    gender: "",
+    location: "",
+    languages: "",
+  };
+  const [inputValue, setInputValue] = useState(initialValues);
+
+  const handleInputValue = (e) => {
+    const values = e.target.value;
+    setInputValue({ ...inputValue, [e.target.name]: values });
+  };
+
+  console.log("vlera eshte ", inputValue);
+  const handleClick = (e) => {
+    navigate("/form-layout", { state: { inputValue } });
+  };
   return (
     <div
       style={{
@@ -48,7 +73,7 @@ export const Formelement = () => {
                   margin: "0px",
                 }}
               >
-                Input Fields
+                Meals
               </p>
             </div>
             <div style={{ padding: "20px 20px" }}>
@@ -62,10 +87,13 @@ export const Formelement = () => {
                   textAlign: "left",
                 }}
               >
-                Default input
+                Breakfast
               </p>
               <input
-                placeholder="Default input text!"
+                name="breakfast"
+                value={inputValue.breakfast}
+                onChange={handleInputValue}
+                placeholder="What are you going to eating?"
                 style={{
                   border: `1.5px solid ${Colors.stroke}`,
                   borderRadius: "4px",
@@ -85,12 +113,15 @@ export const Formelement = () => {
                   textAlign: "left",
                 }}
               >
-                Active input
+                Lunch
               </p>
               <input
-                placeholder="Active input text!"
+                name="lunch"
+                value={inputValue.lunch}
+                onChange={handleInputValue}
+                placeholder="What are you going to eating?"
                 style={{
-                  border: `1px solid ${Colors.primary}`,
+                  border: `1px solid ${Colors.stroke}`,
                   borderRadius: "4px",
                   color: Colors.lightgrey,
                   width: "90%",
@@ -108,11 +139,11 @@ export const Formelement = () => {
                   textAlign: "left",
                 }}
               >
-                Disabled input
+                Disabled
               </p>
               <input
                 disabled
-                placeholder="Disabled input text!"
+                placeholder="Disabled"
                 style={{
                   border: `1px solid ${Colors.stroke}`,
                   borderRadius: "4px",
@@ -144,59 +175,79 @@ export const Formelement = () => {
                   margin: "0px",
                 }}
               >
-                Toggle switch input
+                Menu for today
               </p>
             </div>
             <div style={{ padding: "20px 20px" }}>
               <div
                 style={{
-                  display: "flex",
-                  flexDirection: "row",
-                  gap: "20px",
-                  marginBottom: "7px",
+                  marginBottom: "3%",
+                  marginLeft: "3%",
                 }}
               >
-                <Switch size="large" />
-
-                <Switch defaultChecked size="large" />
+                <FormControlLabel
+                  control={
+                    <Switch
+                      value="Beef"
+                      onChange={handleInputValue}
+                      name="menu"
+                    />
+                  }
+                  label="Beef"
+                />
               </div>
 
               <div
                 style={{
-                  display: "flex",
-                  flexDirection: "row",
-                  gap: "20px",
-                  marginBottom: "7px",
+                  marginBottom: "3%",
+                  marginLeft: "3%",
                 }}
               >
-                <Switch size="large" />
-
-                <Switch defaultChecked size="large" />
+                <FormControlLabel
+                  control={
+                    <Switch
+                      value="Steak"
+                      onChange={handleInputValue}
+                      name="menu"
+                    />
+                  }
+                  label="Steak"
+                />
               </div>
 
               <div
                 style={{
-                  display: "flex",
-                  flexDirection: "row",
-                  gap: "20px",
-                  marginBottom: "7px",
+                  marginBottom: "3%",
+                  marginLeft: "3%",
                 }}
               >
-                <Switch size="large" />
-
-                <Switch defaultChecked size="large" />
+                <FormControlLabel
+                  control={
+                    <Switch
+                      value="Chicken"
+                      onChange={handleInputValue}
+                      name="menu"
+                    />
+                  }
+                  label="Chicken"
+                />
               </div>
               <div
                 style={{
-                  display: "flex",
-                  flexDirection: "row",
-                  gap: "20px",
-                  marginBottom: "7px",
+                  marginBottom: "3%",
+                  marginLeft: "3%",
                 }}
               >
-                <Switch size="large" color="default" />
-
-                <Switch defaultChecked size="large" />
+                <FormControlLabel
+                  control={
+                    <Switch
+                      value="Pork"
+                      onChange={handleInputValue}
+                      name="menu"
+                    />
+                  }
+                  label="Pork"
+                />
               </div>
             </div>
           </div>
@@ -220,7 +271,7 @@ export const Formelement = () => {
                   margin: "0px",
                 }}
               >
-                Time and date
+                Start-end date
               </p>
             </div>
             <div style={{ padding: "20px 20px" }}>
@@ -234,7 +285,7 @@ export const Formelement = () => {
                   textAlign: "left",
                 }}
               >
-                Date picker
+                Start date
               </p>
 
               <input
@@ -260,7 +311,7 @@ export const Formelement = () => {
                   textAlign: "left",
                 }}
               >
-                Select date
+                End date
               </p>
               <input
                 placeholder="dd/mm/yyyy"
@@ -309,7 +360,7 @@ export const Formelement = () => {
                   textAlign: "left",
                 }}
               >
-                Attach file
+                Attach your CV
               </p>
               <div class="container1">
                 <input type="file" />
@@ -325,7 +376,7 @@ export const Formelement = () => {
                   textAlign: "left",
                 }}
               >
-                Attach file
+                Attach cover letter
               </p>
               <div class="container2">
                 <input type="file" />
@@ -361,7 +412,7 @@ export const Formelement = () => {
                   margin: "0px",
                 }}
               >
-                Textarea Fields
+                Vacation
               </p>
             </div>
             <div style={{ padding: "20px 20px" }}>
@@ -375,10 +426,13 @@ export const Formelement = () => {
                   textAlign: "left",
                 }}
               >
-                Default textarea
+                Summer
               </p>
               <input
-                placeholder="Default input text!"
+                name="summer"
+                value={inputValue.summer}
+                onChange={handleInputValue}
+                placeholder="Description for Summer vacation"
                 style={{
                   border: `1px solid ${Colors.stroke}`,
                   borderRadius: "4px",
@@ -399,10 +453,13 @@ export const Formelement = () => {
                   textAlign: "left",
                 }}
               >
-                Active textarea
+                Winter
               </p>
               <input
-                placeholder="Active input text!"
+                name="winter"
+                value={inputValue.winter}
+                onChange={handleInputValue}
+                placeholder="Description for Winter vacation"
                 style={{
                   border: `1px solid ${Colors.primary}`,
                   borderRadius: "4px",
@@ -423,11 +480,11 @@ export const Formelement = () => {
                   textAlign: "left",
                 }}
               >
-                Disabled textarea
+                Disabled
               </p>
               <input
                 disabled
-                placeholder="Disabled input text!"
+                placeholder="Disabled"
                 style={{
                   border: `1px solid ${Colors.stroke}`,
                   borderRadius: "4px",
@@ -444,6 +501,7 @@ export const Formelement = () => {
         <WhiteCard height="37%" size="100%">
           <div
             style={{
+              width: "100%",
               color: Colors.black,
               fontSize: "16px",
               fontWeight: "500",
@@ -460,7 +518,7 @@ export const Formelement = () => {
                   margin: "0px",
                 }}
               >
-                Checkbox and radio
+                Programming Language
               </p>
             </div>
             <div style={{ padding: "20px 20px" }}>
@@ -468,7 +526,8 @@ export const Formelement = () => {
                 style={{
                   display: "flex",
                   flexDirection: "row",
-                  gap: "30px",
+                  justifyContent: "flex-start",
+                  gap: "21%",
                   marginBottom: "15px",
                 }}
               >
@@ -481,8 +540,13 @@ export const Formelement = () => {
                     color: Colors.black,
                   }}
                 >
-                  <input type="checkbox" />
-                  Checkbox Text
+                  <input
+                    value="Java"
+                    type="checkbox"
+                    name="languages"
+                    onChange={handleInputValue}
+                  />
+                  Java
                 </label>
                 <label
                   style={{
@@ -493,15 +557,21 @@ export const Formelement = () => {
                     color: Colors.black,
                   }}
                 >
-                  <input checked type="checkbox" />
-                  Checkbox Text
+                  <input
+                    value=".Net"
+                    type="checkbox"
+                    name="languages"
+                    onChange={handleInputValue}
+                  />
+                  .NET
                 </label>
               </div>
               <div
                 style={{
                   display: "flex",
                   flexDirection: "row",
-                  gap: "30px",
+                  justifyContent: "flex-start",
+                  gap: "12%",
                   marginBottom: "15px",
                 }}
               >
@@ -514,8 +584,13 @@ export const Formelement = () => {
                     color: Colors.black,
                   }}
                 >
-                  <input type="checkbox" />
-                  Checkbox Text
+                  <input
+                    value="Javascript"
+                    type="checkbox"
+                    name="languages"
+                    onChange={handleInputValue}
+                  />
+                  JavaScript
                 </label>
                 <label
                   style={{
@@ -526,15 +601,21 @@ export const Formelement = () => {
                     color: Colors.black,
                   }}
                 >
-                  <input checked type="checkbox" />
-                  Checkbox Text
+                  <input
+                    value="PHP"
+                    type="checkbox"
+                    name="languages"
+                    onChange={handleInputValue}
+                  />
+                  PHP
                 </label>
               </div>
               <div
                 style={{
                   display: "flex",
                   flexDirection: "row",
-                  gap: "30px",
+                  justifyContent: "flex-start",
+                  gap: "16%",
                   marginBottom: "15px",
                 }}
               >
@@ -547,8 +628,13 @@ export const Formelement = () => {
                     color: Colors.black,
                   }}
                 >
-                  <input type="checkbox" />
-                  Checkbox Text
+                  <input
+                    value="ReactJS"
+                    type="checkbox"
+                    name="languages"
+                    onChange={handleInputValue}
+                  />
+                  ReactJS
                 </label>
                 <label
                   style={{
@@ -559,77 +645,75 @@ export const Formelement = () => {
                     color: Colors.black,
                   }}
                 >
-                  <input checked type="checkbox" />
-                  Checkbox Text
-                </label>
-              </div>
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "row",
-                  gap: "30px",
-                  marginBottom: "15px",
-                }}
-              >
-                <label
-                  style={{
-                    fontStyle: "normal",
-                    fontWeight: "500",
-                    fontSize: "14px",
-                    lineHeight: "22px",
-                    color: Colors.black,
-                  }}
-                >
-                  <input type="radio" />
-                  Checkbox Text
-                </label>
-                <label
-                  style={{
-                    fontStyle: "normal",
-                    fontWeight: "500",
-                    fontSize: "14px",
-                    lineHeight: "22px",
-                    color: Colors.black,
-                  }}
-                >
-                  <input checked type="radio" />
-                  Checkbox Text
-                </label>
-              </div>
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "row",
-                  gap: "30px",
-                  marginBottom: "15px",
-                }}
-              >
-                <label
-                  style={{
-                    fontStyle: "normal",
-                    fontWeight: "500",
-                    fontSize: "14px",
-                    lineHeight: "22px",
-                    color: Colors.black,
-                  }}
-                >
-                  <input type="radio" />
-                  Checkbox Text
-                </label>
-                <label
-                  style={{
-                    fontStyle: "normal",
-                    fontWeight: "500",
-                    fontSize: "14px",
-                    lineHeight: "22px",
-                    color: Colors.black,
-                  }}
-                >
-                  <input checked type="radio" />
-                  Checkbox Text
+                  <input
+                    value="VueJS"
+                    type="checkbox"
+                    name="languages"
+                    onChange={handleInputValue}
+                  />
+                  VueJS
                 </label>
               </div>
             </div>
+          </div>
+        </WhiteCard>
+        <WhiteCard>
+          <div>
+            <p
+              style={{
+                padding: "15px 20px",
+                borderBottom: `1px solid ${Colors.stroke}`,
+                margin: "0px",
+              }}
+            >
+              Gender
+            </p>
+          </div>
+
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              gap: "30px",
+              padding: "20px 20px",
+            }}
+          >
+            <label
+              style={{
+                fontStyle: "normal",
+                fontWeight: "500",
+                fontSize: "14px",
+                lineHeight: "22px",
+                color: Colors.black,
+              }}
+            >
+              <input
+                type="radio"
+                name="gender"
+                value="male"
+                onChange={handleInputValue}
+                checked={inputValue.gender === "male"}
+              />
+              Male
+            </label>
+            <label
+              style={{
+                fontStyle: "normal",
+                fontWeight: "500",
+                fontSize: "14px",
+                lineHeight: "22px",
+                color: Colors.black,
+              }}
+            >
+              <input
+                type="radio"
+                name="gender"
+                value="female"
+                onChange={handleInputValue}
+                checked={inputValue.gender === "female"}
+              />
+              Female
+            </label>
           </div>
         </WhiteCard>
         <WhiteCard height="37%" size="100%">
@@ -651,7 +735,7 @@ export const Formelement = () => {
                   margin: "0px",
                 }}
               >
-                Select input
+                Univeristy
               </p>
             </div>
             <div style={{ padding: "20px 20px" }}>
@@ -665,9 +749,12 @@ export const Formelement = () => {
                   textAlign: "left",
                 }}
               >
-                Select Country
+                Univeristy Location
               </p>
               <select
+                name="location"
+                value={inputValue.location}
+                onChange={handleInputValue}
                 style={{
                   border: `1px solid ${Colors.stroke}`,
                   borderRadius: "4px",
@@ -677,9 +764,9 @@ export const Formelement = () => {
                   width: "97%",
                   padding: "15px",
                   background: "transparent",
+                  cursor: "pointer",
                 }}
               >
-                <option>Select Country</option>
                 <option value="Afghanistan">Afghanistan</option>
                 <option value="Albania">Albania</option>
                 <option value="Algeria">Algeria</option>
@@ -718,9 +805,12 @@ export const Formelement = () => {
                   textAlign: "left",
                 }}
               >
-                Multiselect Dropdown
+                Bachelor Degree
               </p>
               <select
+                name="degree"
+                value={inputValue.degree}
+                onChange={handleInputValue}
                 style={{
                   border: `1px solid ${Colors.stroke}`,
                   borderRadius: "4px",
@@ -730,21 +820,37 @@ export const Formelement = () => {
                   width: "97%",
                   padding: "15px",
                   background: "transparent",
+                  cursor: "pointer",
                 }}
               >
-                <option value="design">Design</option>
-                <option value="design">CS</option>
-                <option value="design">MATH</option>
-                <option value="design">Design</option>
-                <option value="design">CS</option>
-                <option value="design">MATH</option>
-                <option value="design">Design</option>
-                <option value="design">CS</option>
-                <option value="design">MATH</option>
+                <option value="Design">Design</option>
+                <option value="Computer Science">CS</option>
+                <option value="Mathematics">MATH</option>
+                <option value="Medicine">Medicine</option>
+                <option value="Architecture">Architecture</option>
+                <option value="design">Justice</option>
               </select>
             </div>
           </div>
         </WhiteCard>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "flex-end",
+            marginTop: "1%",
+          }}
+        >
+          <Button
+            onClick={handleClick}
+            background={Colors.primary}
+            padding="15px"
+            border="0"
+            radius="4px"
+            width="25%"
+          >
+            Next
+          </Button>
+        </div>
       </div>
     </div>
   );
