@@ -8,7 +8,6 @@ export const FormLayout = () => {
 
   const inputValue = location.state.inputValue;
 
-  console.log(inputValue);
   return (
     <div
       style={{
