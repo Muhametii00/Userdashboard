@@ -17,21 +17,22 @@ export const Formelement = () => {
     selectedItems,
     breakfast: "",
     lunch: "",
-    menu: "",
+    menu: [],
+    date: "",
     summer: "",
     winter: "",
-    languages: "",
+    languages: [],
     gender: "",
     location: "",
     degree: "",
   };
   const [inputValue, setInputValue] = useState(initialValues);
 
-  const handleInputValue = (e) => {
-    const values = e.target.value;
-    setInputValue({ ...inputValue, [e.target.name]: values });
+  const handleInputValue = (key, value) => {
+    setInputValue({ ...inputValue, [key]: value });
   };
 
+  console.log("inputValue", inputValue.languages);
   const handleClick = () => {
     navigate("/form-layout", { state: { inputValue } });
   };
@@ -92,7 +93,7 @@ export const Formelement = () => {
               <input
                 name="breakfast"
                 value={inputValue.breakfast}
-                onChange={handleInputValue}
+                onChange={(e) => handleInputValue("Breakfast", e.target.value)}
                 placeholder="What are you going to eating?"
                 style={{
                   border: `1.5px solid ${Colors.stroke}`,
@@ -116,9 +117,8 @@ export const Formelement = () => {
                 Lunch
               </p>
               <input
-                name="lunch"
                 value={inputValue.lunch}
-                onChange={handleInputValue}
+                onChange={(e) => handleInputValue("Lunch", e.target.value)}
                 placeholder="What are you going to eating?"
                 style={{
                   border: `1px solid ${Colors.stroke}`,
@@ -189,8 +189,12 @@ export const Formelement = () => {
                   control={
                     <Switch
                       value="Beef"
-                      onChange={handleInputValue}
-                      name="menu"
+                      onChange={(e) =>
+                        handleInputValue(
+                          inputValue.languages.push(e.target.value),
+                          e.target.value
+                        )
+                      }
                     />
                   }
                   label="Beef"
@@ -207,8 +211,12 @@ export const Formelement = () => {
                   control={
                     <Switch
                       value="Steak"
-                      onChange={handleInputValue}
-                      name="menu"
+                      onChange={(e) =>
+                        handleInputValue(
+                          inputValue.languages.push(e.target.value),
+                          e.target.value
+                        )
+                      }
                     />
                   }
                   label="Steak"
@@ -225,8 +233,11 @@ export const Formelement = () => {
                   control={
                     <Switch
                       value="Chicken"
-                      onChange={handleInputValue}
-                      name="menu"
+                      onChange={(e) =>
+                        handleInputValue(
+                          inputValue.languages.push(e.target.value)
+                        )
+                      }
                     />
                   }
                   label="Chicken"
@@ -242,8 +253,11 @@ export const Formelement = () => {
                   control={
                     <Switch
                       value="Pork"
-                      onChange={handleInputValue}
-                      name="menu"
+                      onChange={(e) =>
+                        handleInputValue(
+                          inputValue.languages.push(e.target.value)
+                        )
+                      }
                     />
                   }
                   label="Pork"
@@ -291,7 +305,7 @@ export const Formelement = () => {
               <input
                 placeholder="dd/mm/yyyy"
                 type="date"
-                name="date"
+                onChange={(e) => handleInputValue("Startdate", e.target.value)}
                 style={{
                   border: `1px solid ${Colors.stroke}`,
                   borderRadius: "4px",
@@ -316,6 +330,7 @@ export const Formelement = () => {
               <input
                 placeholder="dd/mm/yyyy"
                 type="date"
+                onChange={(e) => handleInputValue("EndDate", e.target.value)}
                 style={{
                   border: `1px solid ${Colors.stroke}`,
                   borderRadius: "4px",
@@ -363,7 +378,10 @@ export const Formelement = () => {
                 Attach your CV
               </p>
               <div class="container1">
-                <input type="file" />
+                <input
+                  type="file"
+                  onChange={(e) => handleInputValue("File", e.target.value)}
+                />
               </div>
 
               <p
@@ -429,9 +447,8 @@ export const Formelement = () => {
                 Summer
               </p>
               <input
-                name="summer"
                 value={inputValue.summer}
-                onChange={handleInputValue}
+                onChange={(e) => handleInputValue("File", e.target.value)}
                 placeholder="Description for Summer vacation"
                 style={{
                   border: `1px solid ${Colors.stroke}`,
@@ -456,9 +473,8 @@ export const Formelement = () => {
                 Winter
               </p>
               <input
-                name="winter"
                 value={inputValue.winter}
-                onChange={handleInputValue}
+                onChange={(e) => handleInputValue("File", e.target.value)}
                 placeholder="Description for Winter vacation"
                 style={{
                   border: `1px solid ${Colors.primary}`,
@@ -544,7 +560,11 @@ export const Formelement = () => {
                     value="Java"
                     type="checkbox"
                     name="languages"
-                    onChange={handleInputValue}
+                    onChange={(e) =>
+                      handleInputValue(
+                        inputValue.languages.push(e.target.value)
+                      )
+                    }
                   />
                   Java
                 </label>
@@ -561,7 +581,11 @@ export const Formelement = () => {
                     value=".Net"
                     type="checkbox"
                     name="languages"
-                    onChange={handleInputValue}
+                    onChange={(e) =>
+                      handleInputValue(
+                        inputValue.languages.push(e.target.value)
+                      )
+                    }
                   />
                   .NET
                 </label>
@@ -588,7 +612,11 @@ export const Formelement = () => {
                     value="Javascript"
                     type="checkbox"
                     name="languages"
-                    onChange={handleInputValue}
+                    onChange={(e) =>
+                      handleInputValue(
+                        inputValue.languages.push(e.target.value)
+                      )
+                    }
                   />
                   JavaScript
                 </label>
@@ -605,7 +633,11 @@ export const Formelement = () => {
                     value="PHP"
                     type="checkbox"
                     name="languages"
-                    onChange={handleInputValue}
+                    onChange={(e) =>
+                      handleInputValue(
+                        inputValue.languages.push(e.target.value)
+                      )
+                    }
                   />
                   PHP
                 </label>
@@ -632,7 +664,11 @@ export const Formelement = () => {
                     value="ReactJS"
                     type="checkbox"
                     name="languages"
-                    onChange={handleInputValue}
+                    onChange={(e) =>
+                      handleInputValue(
+                        inputValue.languages.push(e.target.value)
+                      )
+                    }
                   />
                   ReactJS
                 </label>
@@ -648,8 +684,11 @@ export const Formelement = () => {
                   <input
                     value="VueJS"
                     type="checkbox"
-                    name="languages"
-                    onChange={handleInputValue}
+                    onChange={(e) =>
+                      handleInputValue(
+                        inputValue.languages.push(e.target.value)
+                      )
+                    }
                   />
                   VueJS
                 </label>
@@ -689,9 +728,8 @@ export const Formelement = () => {
             >
               <input
                 type="radio"
-                name="gender"
                 value="male"
-                onChange={handleInputValue}
+                onChange={(e) => handleInputValue("gender", e.target.value)}
                 checked={inputValue.gender === "male"}
               />
               Male
@@ -707,9 +745,8 @@ export const Formelement = () => {
             >
               <input
                 type="radio"
-                name="gender"
                 value="female"
-                onChange={handleInputValue}
+                onChange={(e) => handleInputValue("gender", e.target.value)}
                 checked={inputValue.gender === "female"}
               />
               Female
@@ -752,9 +789,8 @@ export const Formelement = () => {
                 Univeristy Location
               </p>
               <select
-                name="location"
                 value={inputValue.location}
-                onChange={handleInputValue}
+                onChange={(e) => handleInputValue("location", e.target.value)}
                 style={{
                   border: `1px solid ${Colors.stroke}`,
                   borderRadius: "4px",
@@ -808,9 +844,8 @@ export const Formelement = () => {
                 Bachelor Degree
               </p>
               <select
-                name="degree"
                 value={inputValue.degree}
-                onChange={handleInputValue}
+                onChange={(e) => handleInputValue("degree", e.target.value)}
                 style={{
                   border: `1px solid ${Colors.stroke}`,
                   borderRadius: "4px",
