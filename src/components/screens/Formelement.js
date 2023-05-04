@@ -20,9 +20,10 @@ export const Formelement = () => {
     menu: "",
     summer: "",
     winter: "",
+    languages: "",
     gender: "",
     location: "",
-    languages: "",
+    degree: "",
   };
   const [inputValue, setInputValue] = useState(initialValues);
 
@@ -31,8 +32,7 @@ export const Formelement = () => {
     setInputValue({ ...inputValue, [e.target.name]: values });
   };
 
-  console.log("vlera eshte ", inputValue);
-  const handleClick = (e) => {
+  const handleClick = () => {
     navigate("/form-layout", { state: { inputValue } });
   };
   return (
