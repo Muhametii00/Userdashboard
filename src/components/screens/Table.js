@@ -81,7 +81,11 @@ export const Table = () => {
               </th>
               <td>{layoutInputs.inputValue.breakfast}</td>
               <td>{layoutInputs.inputValue.lunch}</td>
-              <td>{layoutInputs.inputValue.menu}</td>
+              <td>
+                {layoutInputs.inputValue.menu.map((menus) => (
+                  <td>{menus}</td>
+                ))}
+              </td>
               <td>{layoutInputs.inputValue.gender}</td>
             </tr>
             <tr
@@ -120,7 +124,9 @@ export const Table = () => {
             </tr>
             <tr>
               <th style={{ color: Colors.black }}>
-                {layoutInputs.inputValue.languages}
+                {layoutInputs.inputValue.languages.map((language) => (
+                  <td>{language}</td>
+                ))}
               </th>
               <td>{layoutInputs.inputValue.resume}</td>
               <td>{layoutInputs.inputValue.cv}</td>
