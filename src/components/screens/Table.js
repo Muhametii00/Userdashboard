@@ -72,6 +72,7 @@ export const Table = () => {
               <td style={{ color: Colors.lightblue }}>Breakfast</td>
               <td style={{ color: Colors.lightblue }}>Lunch</td>
               <td style={{ color: Colors.lightblue }}>Menu for today</td>
+              <td style={{ color: Colors.lightblue }}>Gender</td>
             </tr>
             <tr>
               <th style={{ color: Colors.green, fontSize: "18px" }}>
@@ -81,6 +82,7 @@ export const Table = () => {
               <td>{layoutInputs.inputValue.breakfast}</td>
               <td>{layoutInputs.inputValue.lunch}</td>
               <td>{layoutInputs.inputValue.menu}</td>
+              <td>{layoutInputs.inputValue.gender}</td>
             </tr>
             <tr
               style={{
@@ -93,7 +95,7 @@ export const Table = () => {
               <td style={{ color: Colors.lightblue }}>Winter Vacation</td>
               <td style={{ color: Colors.lightblue }}>Start Date</td>
               <td style={{ color: Colors.lightblue }}>End Date</td>
-              <td style={{ color: Colors.lightblue }}>Gender</td>
+              <td style={{ color: Colors.lightblue }}>Bachelor Degree</td>
             </tr>
             <tr>
               <th style={{ color: Colors.black }}>
@@ -102,7 +104,7 @@ export const Table = () => {
               <td>{layoutInputs.inputValue.winter}</td>
               <td>{layoutInputs.inputValue.startdate}</td>
               <td>{layoutInputs.inputValue.enddate}</td>
-              <td>{layoutInputs.inputValue.gender}</td>
+              <td>{layoutInputs.inputValue.degree}</td>
             </tr>
             <tr
               style={{
@@ -115,7 +117,6 @@ export const Table = () => {
               <td style={{ color: Colors.lightblue }}>Resume </td>
               <td style={{ color: Colors.lightblue }}>Cover Letter</td>
               <td style={{ color: Colors.lightblue }}>University Location</td>
-              <td style={{ color: Colors.lightblue }}>Bachelor Degree</td>
             </tr>
             <tr>
               <th style={{ color: Colors.black }}>
@@ -124,7 +125,6 @@ export const Table = () => {
               <td>{layoutInputs.inputValue.resume}</td>
               <td>{layoutInputs.inputValue.cv}</td>
               <td>{layoutInputs.inputValue.location}</td>
-              <td>{layoutInputs.inputValue.degree}</td>
             </tr>
           </table>
         </div>
