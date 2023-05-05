@@ -17,8 +17,12 @@ import Eye from "../../assets/icons/Eye.png";
 import Bin from "../../assets/icons/Bin.png";
 import Download from "../../assets/icons/Download.png";
 import { Colors } from "../../assets/helpers/Colors";
+import { useLocation } from "react-router-dom";
 
 export const Table = () => {
+  const location = useLocation();
+
+  const layoutInputs = location.state.layoutInputs;
   return (
     <div
       style={{
@@ -43,7 +47,7 @@ export const Table = () => {
               }}
             >
               <th>Source</th>
-              <td>Visitors</td>
+              <td>First Name</td>
               <td>Revenues</td>
               <td>Sales</td>
               <td>Conversion</td>
@@ -53,7 +57,7 @@ export const Table = () => {
                 <img src={Google} alt="Google" />
                 Google
               </th>
-              <td>3.5K</td>
+              <td>{layoutInputs.firstName}</td>
               <td style={{ color: Colors.green }}>$5,768</td>
               <td>590</td>
               <td style={{ color: Colors.lightblue }}>4.8%</td>

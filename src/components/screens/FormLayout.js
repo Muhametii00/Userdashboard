@@ -3,7 +3,6 @@ import WhiteCard from "../Cards.js/WhiteCard";
 import { Button } from "../shared/Button";
 import { useLocation } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import { Colors } from "../../assets/helpers/Colors";
 
 export const FormLayout = () => {
   const location = useLocation();
@@ -180,37 +179,6 @@ export const FormLayout = () => {
                     padding: "15px",
                   }}
                 ></input>
-                <p
-                  style={{
-                    color: "#1C2434",
-                    fontSize: "14px",
-                    fontWeight: "500",
-                    lineHeight: "22px",
-                    letterSpacing: "0px",
-                    textAlign: "left",
-                  }}
-                >
-                  Subject
-                </p>
-                <select
-                  style={{
-                    border: "1.5px solid #E2E8F0",
-                    borderRadius: "4px",
-                    color: "#64748B",
-                    fontSize: "16px",
-                    lineHeight: "24px",
-                    width: "97%",
-                    padding: "15px",
-                    background: "transparent",
-                  }}
-                >
-                  <option>Type your subject</option>
-                  <option>Mathmatics</option>
-                  <option>Design Graphic</option>
-                  <option>Computer Science</option>
-                  <option>Midicine</option>
-                  <option>Law</option>
-                </select>
                 <p
                   style={{
                     color: "#1C2434",
