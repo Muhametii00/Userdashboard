@@ -1,11 +1,8 @@
 import React from "react";
 import WhiteCard from "../Cards.js/WhiteCard";
 import "../styles/Table.css";
-import Google from "../../assets/icons/Google.png";
-import Twitter from "../../assets/icons/Twitter.png";
-import Github from "../../assets/icons/Github.png";
-import Vimeo from "../../assets/icons/Vimeo.png";
-import Facebook from "../../assets/icons/Facebook.png";
+import FormLayout from "../../assets/icons/FormLayout.png";
+import Forms from "../../assets/icons/Forms.png";
 import Apple from "../../assets/icons/Apple.png";
 import Mac from "../../assets/icons/Mac.jpg";
 import Dell from "../../assets/icons/Dell.jpg";
@@ -37,7 +34,9 @@ export const Table = () => {
       <WhiteCard height="100%" size="95%">
         <div className="table-container">
           <table>
-            <th className="top-channels">Top Channels</th>
+            <th className="top-channels">
+              {layoutInputs.inputValue.selectedItems}
+            </th>
 
             <tr
               style={{
@@ -46,61 +45,86 @@ export const Table = () => {
                 color: "#64748B",
               }}
             >
-              <th>Source</th>
-              <td>First Name</td>
-              <td>Revenues</td>
-              <td>Sales</td>
-              <td>Conversion</td>
+              <th style={{ color: Colors.green }}>Screen</th>
+              <td style={{ color: Colors.lightblue }}>First Name</td>
+              <td style={{ color: Colors.lightblue }}>Last Name</td>
+              <td style={{ color: Colors.lightblue }}>Email</td>
+              <td style={{ color: Colors.lightblue }}>Subject</td>
             </tr>
             <tr>
-              <th>
-                <img src={Google} alt="Google" />
-                Google
+              <th style={{ color: Colors.green, fontSize: "18px" }}>
+                <img src={FormLayout} alt="FormLayout" />
+                FormLayout
               </th>
               <td>{layoutInputs.firstName}</td>
-              <td style={{ color: Colors.green }}>$5,768</td>
-              <td>590</td>
-              <td style={{ color: Colors.lightblue }}>4.8%</td>
+              <td>{layoutInputs.lastName}</td>
+              <td>{layoutInputs.email}</td>
+              <td>{layoutInputs.subject}</td>
+            </tr>
+            <tr
+              style={{
+                backgroundColor: "#F7F9FC",
+                borderRadius: "3px",
+                color: "#64748B",
+              }}
+            >
+              <th style={{ color: Colors.green }}>Screen</th>
+              <td style={{ color: Colors.lightblue }}>Breakfast</td>
+              <td style={{ color: Colors.lightblue }}>Lunch</td>
+              <td style={{ color: Colors.lightblue }}>Menu for today</td>
             </tr>
             <tr>
-              <th>
-                <img src={Twitter} alt="Twitter" />
-                Twitter
+              <th style={{ color: Colors.green, fontSize: "18px" }}>
+                <img src={Forms} alt="FormElement" />
+                FormElement
               </th>
-              <td>2.2K</td>
-              <td style={{ color: Colors.green }}>$4,635</td>
-              <td>467</td>
-              <td style={{ color: Colors.lightblue }}>4.3%</td>
+              <td>{layoutInputs.inputValue.breakfast}</td>
+              <td>{layoutInputs.inputValue.lunch}</td>
+              <td>{layoutInputs.inputValue.menu}</td>
+            </tr>
+            <tr
+              style={{
+                backgroundColor: "#F7F9FC",
+                borderRadius: "3px",
+                color: "#64748B",
+              }}
+            >
+              <th style={{ color: Colors.lightblue }}>Summer Vacation</th>
+              <td style={{ color: Colors.lightblue }}>Winter Vacation</td>
+              <td style={{ color: Colors.lightblue }}>Start Date</td>
+              <td style={{ color: Colors.lightblue }}>End Date</td>
+              <td style={{ color: Colors.lightblue }}>Gender</td>
             </tr>
             <tr>
-              <th>
-                <img src={Github} alt="Github" />
-                Github
+              <th style={{ color: Colors.black }}>
+                {layoutInputs.inputValue.summer}
               </th>
-              <td>2.1K</td>
-              <td style={{ color: Colors.green }}>$4,290</td>
-              <td>420</td>
-              <td style={{ color: Colors.lightblue }}>3.7%</td>
+              <td>{layoutInputs.inputValue.winter}</td>
+              <td>{layoutInputs.inputValue.startdate}</td>
+              <td>{layoutInputs.inputValue.enddate}</td>
+              <td>{layoutInputs.inputValue.gender}</td>
+            </tr>
+            <tr
+              style={{
+                backgroundColor: "#F7F9FC",
+                borderRadius: "3px",
+                color: "#64748B",
+              }}
+            >
+              <th style={{ color: Colors.lightblue }}>Programming Languages</th>
+              <td style={{ color: Colors.lightblue }}>Resume </td>
+              <td style={{ color: Colors.lightblue }}>Cover Letter</td>
+              <td style={{ color: Colors.lightblue }}>University Location</td>
+              <td style={{ color: Colors.lightblue }}>Bachelor Degree</td>
             </tr>
             <tr>
-              <th>
-                <img src={Vimeo} alt="Vimeo" />
-                Vimeo
+              <th style={{ color: Colors.black }}>
+                {layoutInputs.inputValue.languages}
               </th>
-              <td>1.5K</td>
-              <td style={{ color: Colors.green }}>$3,580</td>
-              <td>389</td>
-              <td style={{ color: Colors.lightblue }}>2.5%</td>
-            </tr>
-            <tr>
-              <th>
-                <img src={Facebook} alt="Facebook" />
-                Facebook
-              </th>
-              <td>1.2K</td>
-              <td style={{ color: Colors.green }}>$2,740</td>
-              <td>230</td>
-              <td style={{ color: Colors.lightblue }}>1.9%</td>
+              <td>{layoutInputs.inputValue.resume}</td>
+              <td>{layoutInputs.inputValue.cv}</td>
+              <td>{layoutInputs.inputValue.location}</td>
+              <td>{layoutInputs.inputValue.degree}</td>
             </tr>
           </table>
         </div>
