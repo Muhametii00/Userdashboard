@@ -2,11 +2,18 @@ import React from "react";
 import WhiteCard from "../Cards.js/WhiteCard";
 import { Button } from "../shared/Button";
 import { useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { Colors } from "../../assets/helpers/Colors";
 
 export const FormLayout = () => {
   const location = useLocation();
+  const navigate = useNavigate();
 
   const inputValue = location.state.inputValue;
+
+  const handleClick = () => {
+    navigate("/table", { state: {} });
+  };
 
   return (
     <div
@@ -471,6 +478,24 @@ export const FormLayout = () => {
             </div>
           </div>
         </WhiteCard>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "flex-end",
+            marginTop: "1%",
+          }}
+        >
+          <Button
+            onClick={handleClick}
+            background={Colors.primary}
+            padding="15px"
+            border="0"
+            radius="4px"
+            width="25%"
+          >
+            Next
+          </Button>
+        </div>
       </div>
     </div>
   );
