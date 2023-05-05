@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import WhiteCard from "../Cards.js/WhiteCard";
 import { Button } from "../shared/Button";
 import { useLocation } from "react-router-dom";
@@ -11,8 +11,24 @@ export const FormLayout = () => {
 
   const inputValue = location.state.inputValue;
 
-  const handleClick = () => {
-    navigate("/table", { state: {} });
+  const layoutInitialValues = {
+    inputValue,
+    firstName: "",
+    lastName: "",
+    email: "",
+    subject: "",
+    message: "",
+  };
+  const [layoutInputs, setLayoutInputs] = useState(layoutInitialValues);
+
+  const handleChange = (key, value) => {
+    setLayoutInputs({ ...layoutInputs, [key]: value });
+  };
+  console.log(layoutInputs);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    navigate("/table", { state: { layoutInputs } });
   };
 
   return (
@@ -57,166 +73,180 @@ export const FormLayout = () => {
               </p>
             </div>
             <div style={{ padding: "20px 20px" }}>
-              <div
-                style={{ display: "flex", flexDirection: "row", gap: "10%" }}
-              >
-                <div>
-                  <p
-                    style={{
-                      color: "#1C2434",
-                      fontSize: "14px",
-                      fontWeight: "500",
-                      lineHeight: "22px",
-                      letterSpacing: "0px",
-                      textAlign: "left",
-                    }}
-                  >
-                    First name
-                  </p>
-                  <input
-                    placeholder="Enter your first name"
-                    style={{
-                      border: "1.5px solid #E2E8F0",
-                      borderRadius: "4px",
-                      color: "#64748B",
-                      width: "100%",
-                      padding: "15px",
-                    }}
-                  ></input>
+              <form onSubmit={handleSubmit}>
+                <div
+                  style={{ display: "flex", flexDirection: "row", gap: "10%" }}
+                >
+                  <div>
+                    <p
+                      style={{
+                        color: "#1C2434",
+                        fontSize: "14px",
+                        fontWeight: "500",
+                        lineHeight: "22px",
+                        letterSpacing: "0px",
+                        textAlign: "left",
+                      }}
+                    >
+                      First name
+                    </p>
+                    <input
+                      value={layoutInputs.firstName}
+                      onChange={(e) =>
+                        handleChange("firstName", e.target.value)
+                      }
+                      placeholder="Enter your first name"
+                      style={{
+                        border: "1.5px solid #E2E8F0",
+                        borderRadius: "4px",
+                        color: "#64748B",
+                        width: "100%",
+                        padding: "15px",
+                      }}
+                    ></input>
+                  </div>
+                  <div>
+                    <p
+                      style={{
+                        color: "#1C2434",
+                        fontSize: "14px",
+                        fontWeight: "500",
+                        lineHeight: "22px",
+                        letterSpacing: "0px",
+                        textAlign: "left",
+                      }}
+                    >
+                      Last name
+                    </p>
+                    <input
+                      value={layoutInputs.lastName}
+                      onChange={(e) => handleChange("lastName", e.target.value)}
+                      placeholder="Enter your last name"
+                      style={{
+                        border: "1.5px solid #E2E8F0",
+                        borderRadius: "4px",
+                        color: "#64748B",
+                        width: "100%",
+                        padding: "15px",
+                      }}
+                    ></input>
+                  </div>
                 </div>
-                <div>
-                  <p
-                    style={{
-                      color: "#1C2434",
-                      fontSize: "14px",
-                      fontWeight: "500",
-                      lineHeight: "22px",
-                      letterSpacing: "0px",
-                      textAlign: "left",
-                    }}
-                  >
-                    Last name
-                  </p>
-                  <input
-                    placeholder="Enter your last name"
-                    style={{
-                      border: "1.5px solid #E2E8F0",
-                      borderRadius: "4px",
-                      color: "#64748B",
-                      width: "100%",
-                      padding: "15px",
-                    }}
-                  ></input>
-                </div>
-              </div>
-              <p
-                style={{
-                  color: "#1C2434",
-                  fontSize: "14px",
-                  fontWeight: "500",
-                  lineHeight: "22px",
-                  letterSpacing: "0px",
-                  textAlign: "left",
-                }}
-              >
-                Email
-              </p>
-              <input
-                placeholder="Enter your email address"
-                style={{
-                  border: "1.5px solid #E2E8F0",
-                  borderRadius: "4px",
-                  color: "#64748B",
-                  width: "90%",
-                  padding: "15px",
-                }}
-              ></input>
-              <p
-                style={{
-                  color: "#1C2434",
-                  fontSize: "14px",
-                  fontWeight: "500",
-                  lineHeight: "22px",
-                  letterSpacing: "0px",
-                  textAlign: "left",
-                }}
-              >
-                Subject
-              </p>
-              <input
-                placeholder="Select subject"
-                style={{
-                  border: "1.5px solid #E2E8F0",
-                  borderRadius: "4px",
-                  color: "#64748B",
-                  width: "90%",
-                  padding: "15px",
-                }}
-              ></input>
-              <p
-                style={{
-                  color: "#1C2434",
-                  fontSize: "14px",
-                  fontWeight: "500",
-                  lineHeight: "22px",
-                  letterSpacing: "0px",
-                  textAlign: "left",
-                }}
-              >
-                Subject
-              </p>
-              <select
-                style={{
-                  border: "1.5px solid #E2E8F0",
-                  borderRadius: "4px",
-                  color: "#64748B",
-                  fontSize: "16px",
-                  lineHeight: "24px",
-                  width: "97%",
-                  padding: "15px",
-                  background: "transparent",
-                }}
-              >
-                <option>Type your subject</option>
-                <option>Mathmatics</option>
-                <option>Design Graphic</option>
-                <option>Computer Science</option>
-                <option>Midicine</option>
-                <option>Law</option>
-              </select>
-              <p
-                style={{
-                  color: "#1C2434",
-                  fontSize: "14px",
-                  fontWeight: "500",
-                  lineHeight: "22px",
-                  letterSpacing: "0px",
-                  textAlign: "left",
-                }}
-              >
-                Message
-              </p>
-              <input
-                placeholder="Type your message"
-                style={{
-                  border: "1.5px solid #E2E8F0",
-                  borderRadius: "4px",
-                  color: "#64748B",
-                  width: "90%",
-                  padding: "15px",
-                  paddingBottom: "30%",
-                  marginBottom: "20px",
-                }}
-              ></input>
-              <Button
-                width="98%"
-                background="#3C50E0"
-                border="0"
-                padding="15px"
-                radius="4px"
-              >
-                Send Message
-              </Button>
+                <p
+                  style={{
+                    color: "#1C2434",
+                    fontSize: "14px",
+                    fontWeight: "500",
+                    lineHeight: "22px",
+                    letterSpacing: "0px",
+                    textAlign: "left",
+                  }}
+                >
+                  Email
+                </p>
+                <input
+                  value={layoutInputs.email}
+                  onChange={(e) => handleChange("email", e.target.value)}
+                  placeholder="Enter your email address"
+                  style={{
+                    border: "1.5px solid #E2E8F0",
+                    borderRadius: "4px",
+                    color: "#64748B",
+                    width: "90%",
+                    padding: "15px",
+                  }}
+                ></input>
+                <p
+                  style={{
+                    color: "#1C2434",
+                    fontSize: "14px",
+                    fontWeight: "500",
+                    lineHeight: "22px",
+                    letterSpacing: "0px",
+                    textAlign: "left",
+                  }}
+                >
+                  Subject
+                </p>
+                <input
+                  value={layoutInputs.subject}
+                  onChange={(e) => handleChange("subject", e.target.value)}
+                  placeholder="Select subject"
+                  style={{
+                    border: "1.5px solid #E2E8F0",
+                    borderRadius: "4px",
+                    color: "#64748B",
+                    width: "90%",
+                    padding: "15px",
+                  }}
+                ></input>
+                <p
+                  style={{
+                    color: "#1C2434",
+                    fontSize: "14px",
+                    fontWeight: "500",
+                    lineHeight: "22px",
+                    letterSpacing: "0px",
+                    textAlign: "left",
+                  }}
+                >
+                  Subject
+                </p>
+                <select
+                  style={{
+                    border: "1.5px solid #E2E8F0",
+                    borderRadius: "4px",
+                    color: "#64748B",
+                    fontSize: "16px",
+                    lineHeight: "24px",
+                    width: "97%",
+                    padding: "15px",
+                    background: "transparent",
+                  }}
+                >
+                  <option>Type your subject</option>
+                  <option>Mathmatics</option>
+                  <option>Design Graphic</option>
+                  <option>Computer Science</option>
+                  <option>Midicine</option>
+                  <option>Law</option>
+                </select>
+                <p
+                  style={{
+                    color: "#1C2434",
+                    fontSize: "14px",
+                    fontWeight: "500",
+                    lineHeight: "22px",
+                    letterSpacing: "0px",
+                    textAlign: "left",
+                  }}
+                >
+                  Message
+                </p>
+                <input
+                  value={layoutInputs.message}
+                  onChange={(e) => handleChange("message", e.target.value)}
+                  placeholder="Type your message"
+                  style={{
+                    border: "1.5px solid #E2E8F0",
+                    borderRadius: "4px",
+                    color: "#64748B",
+                    width: "90%",
+                    padding: "15px",
+                    paddingBottom: "30%",
+                    marginBottom: "20px",
+                  }}
+                ></input>
+                <Button
+                  width="98%"
+                  background="#3C50E0"
+                  border="0"
+                  padding="15px"
+                  radius="4px"
+                >
+                  Send Message
+                </Button>
+              </form>
             </div>
           </div>
         </WhiteCard>
@@ -478,24 +508,6 @@ export const FormLayout = () => {
             </div>
           </div>
         </WhiteCard>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "flex-end",
-            marginTop: "1%",
-          }}
-        >
-          <Button
-            onClick={handleClick}
-            background={Colors.primary}
-            padding="15px"
-            border="0"
-            radius="4px"
-            width="25%"
-          >
-            Next
-          </Button>
-        </div>
       </div>
     </div>
   );
