@@ -18,7 +18,10 @@ export const Formelement = () => {
     breakfast: "",
     lunch: "",
     menu: [],
-    date: "",
+    startdate: "",
+    enddate: "",
+    resume: "",
+    cv: "",
     summer: "",
     winter: "",
     languages: [],
@@ -32,7 +35,6 @@ export const Formelement = () => {
     setInputValue({ ...inputValue, [key]: value });
   };
 
-  console.log("inputValue", inputValue.languages);
   const handleClick = () => {
     navigate("/form-layout", { state: { inputValue } });
   };
@@ -91,9 +93,8 @@ export const Formelement = () => {
                 Breakfast
               </p>
               <input
-                name="breakfast"
                 value={inputValue.breakfast}
-                onChange={(e) => handleInputValue("Breakfast", e.target.value)}
+                onChange={(e) => handleInputValue("breakfast", e.target.value)}
                 placeholder="What are you going to eating?"
                 style={{
                   border: `1.5px solid ${Colors.stroke}`,
@@ -118,7 +119,7 @@ export const Formelement = () => {
               </p>
               <input
                 value={inputValue.lunch}
-                onChange={(e) => handleInputValue("Lunch", e.target.value)}
+                onChange={(e) => handleInputValue("lunch", e.target.value)}
                 placeholder="What are you going to eating?"
                 style={{
                   border: `1px solid ${Colors.stroke}`,
@@ -190,10 +191,7 @@ export const Formelement = () => {
                     <Switch
                       value="Beef"
                       onChange={(e) =>
-                        handleInputValue(
-                          inputValue.languages.push(e.target.value),
-                          e.target.value
-                        )
+                        handleInputValue(inputValue.menu.push(e.target.value))
                       }
                     />
                   }
@@ -212,10 +210,7 @@ export const Formelement = () => {
                     <Switch
                       value="Steak"
                       onChange={(e) =>
-                        handleInputValue(
-                          inputValue.languages.push(e.target.value),
-                          e.target.value
-                        )
+                        handleInputValue(inputValue.menu.push(e.target.value))
                       }
                     />
                   }
@@ -234,9 +229,7 @@ export const Formelement = () => {
                     <Switch
                       value="Chicken"
                       onChange={(e) =>
-                        handleInputValue(
-                          inputValue.languages.push(e.target.value)
-                        )
+                        handleInputValue(inputValue.menu.push(e.target.value))
                       }
                     />
                   }
@@ -254,9 +247,7 @@ export const Formelement = () => {
                     <Switch
                       value="Pork"
                       onChange={(e) =>
-                        handleInputValue(
-                          inputValue.languages.push(e.target.value)
-                        )
+                        handleInputValue(inputValue.menu.push(e.target.value))
                       }
                     />
                   }
@@ -305,7 +296,7 @@ export const Formelement = () => {
               <input
                 placeholder="dd/mm/yyyy"
                 type="date"
-                onChange={(e) => handleInputValue("Startdate", e.target.value)}
+                onChange={(e) => handleInputValue("startdate", e.target.value)}
                 style={{
                   border: `1px solid ${Colors.stroke}`,
                   borderRadius: "4px",
@@ -330,7 +321,7 @@ export const Formelement = () => {
               <input
                 placeholder="dd/mm/yyyy"
                 type="date"
-                onChange={(e) => handleInputValue("EndDate", e.target.value)}
+                onChange={(e) => handleInputValue("enddate", e.target.value)}
                 style={{
                   border: `1px solid ${Colors.stroke}`,
                   borderRadius: "4px",
@@ -380,7 +371,7 @@ export const Formelement = () => {
               <div class="container1">
                 <input
                   type="file"
-                  onChange={(e) => handleInputValue("File", e.target.value)}
+                  onChange={(e) => handleInputValue("resume", e.target.value)}
                 />
               </div>
 
@@ -397,7 +388,10 @@ export const Formelement = () => {
                 Attach cover letter
               </p>
               <div class="container2">
-                <input type="file" />
+                <input
+                  type="file"
+                  onChange={(e) => handleInputValue("cv", e.target.value)}
+                />
               </div>
             </div>
           </div>
@@ -448,7 +442,7 @@ export const Formelement = () => {
               </p>
               <input
                 value={inputValue.summer}
-                onChange={(e) => handleInputValue("File", e.target.value)}
+                onChange={(e) => handleInputValue("summer", e.target.value)}
                 placeholder="Description for Summer vacation"
                 style={{
                   border: `1px solid ${Colors.stroke}`,
@@ -474,7 +468,7 @@ export const Formelement = () => {
               </p>
               <input
                 value={inputValue.winter}
-                onChange={(e) => handleInputValue("File", e.target.value)}
+                onChange={(e) => handleInputValue("winter", e.target.value)}
                 placeholder="Description for Winter vacation"
                 style={{
                   border: `1px solid ${Colors.primary}`,
