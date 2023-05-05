@@ -23,7 +23,6 @@ export const FormLayout = () => {
   const handleChange = (key, value) => {
     setLayoutInputs({ ...layoutInputs, [key]: value });
   };
-  console.log(layoutInputs);
 
   const handleSubmit = (e) => {
     e.preventDefault();
