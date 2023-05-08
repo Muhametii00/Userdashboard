@@ -9,6 +9,8 @@ import Inboxx from "../assets/icons/Inboxx.png";
 import Invoice from "../assets/icons/Invoice.png";
 import Auth from "../assets/icons/Auth.png";
 import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import { Colors } from "../assets/helpers/Colors";
 
 export const Sidebar = () => {
   return (
@@ -20,56 +22,154 @@ export const Sidebar = () => {
       <ul className="nav">
         <li>
           <img src={Grid} alt="Grid" />
-          <Link to="/">Dashboard</Link>
+          <NavLink
+            style={({ isActive }) =>
+              isActive ? { color: "white" } : { color: Colors.lightgrey }
+            }
+            to="/"
+          >
+            Dashboard
+          </NavLink>
         </li>
         <li>
           <img src={ProfileLogo} alt="ProfileLogo" />
-          <Link to="/profile">Profile</Link>
+          <NavLink
+            style={({ isActive }) =>
+              isActive ? { color: "white" } : { color: Colors.lightgrey }
+            }
+            to="/profile"
+          >
+            Profile
+          </NavLink>
         </li>
         <li>
           <img src={Forms} alt="Forms" />
-          <Link to="/form-element">Form Element</Link>
+          <NavLink
+            style={({ isActive }) =>
+              isActive ? { color: "white" } : { color: Colors.lightgrey }
+            }
+            to="/form-element"
+          >
+            Form Element
+          </NavLink>
         </li>
         <li>
           <img src={FormLayout} alt="Forms" />
-          <Link to="/form-layout">Form Layout</Link>
+          <NavLink
+            style={({ isActive }) =>
+              isActive ? { color: "white" } : { color: Colors.lightgrey }
+            }
+            to="/form-layout"
+          >
+            Form Layout
+          </NavLink>
         </li>
         <li>
           <img src={Table} alt="Forms" />
-          <Link to="/table">Table</Link>
+          <NavLink
+            style={({ isActive }) =>
+              isActive ? { color: "white" } : { color: Colors.lightgrey }
+            }
+            to="/table"
+          >
+            Table
+          </NavLink>
         </li>
         <li>
           <img src={Inboxx} alt="Forms" />
-          <Link to="/inbox">Inbox</Link>
+          <NavLink
+            style={({ isActive }) =>
+              isActive ? { color: "white" } : { color: Colors.lightgrey }
+            }
+            to="/inbox"
+          >
+            Inbox
+          </NavLink>
         </li>
         <li>
           <img src={Invoice} alt="Forms" />
-          <Link to="/invoice">Invoice</Link>
+          <NavLink
+            style={({ isActive }) =>
+              isActive ? { color: "white" } : { color: Colors.lightgrey }
+            }
+            to="/invoice"
+          >
+            Invoice
+          </NavLink>
         </li>
         <li>
-          <Link to="/alerts">Alerts</Link>
+          <NavLink
+            style={({ isActive }) =>
+              isActive ? { color: "white" } : { color: Colors.lightgrey }
+            }
+            to="/alerts"
+          >
+            Alerts
+          </NavLink>
         </li>
         <li>
-          <Link to="/buttons">Buttons</Link>
+          <NavLink
+            style={({ isActive }) =>
+              isActive ? { color: "white" } : { color: Colors.lightgrey }
+            }
+            to="/buttons"
+          >
+            Buttons
+          </NavLink>
         </li>
         <li>
-          <Link to="/calendar">Calendar</Link>
+          <NavLink
+            style={({ isActive }) =>
+              isActive ? { color: "white" } : { color: Colors.lightgrey }
+            }
+            to="/calendar"
+          >
+            Calendar
+          </NavLink>
         </li>
         <li>
-          <Link to="/settings">Settings</Link>
+          <NavLink
+            style={({ isActive }) =>
+              isActive ? { color: "white" } : { color: Colors.lightgrey }
+            }
+            to="/settings"
+          >
+            Settings
+          </NavLink>
         </li>
         <li className="container-auth">
           <img src={Auth} alt="Auth" />
           <h2>Authentication</h2>
         </li>
         <li>
-          <Link to="/sign-in">Sign In</Link>
+          <NavLink
+            style={({ isActive }) =>
+              isActive ? { color: "white" } : { color: Colors.lightgrey }
+            }
+            to="/sign-in"
+          >
+            Sign In
+          </NavLink>
         </li>
         <li>
-          <Link to="/sign-up">Sign Up</Link>
+          <NavLink
+            style={({ isActive }) =>
+              isActive ? { color: "white" } : { color: Colors.lightgrey }
+            }
+            to="/sign-up"
+          >
+            Sign Up
+          </NavLink>
         </li>
         <li>
-          <Link to="/reset-password">Reset Password</Link>
+          <NavLink
+            style={({ isActive }) =>
+              isActive ? { color: "white" } : { color: Colors.lightgrey }
+            }
+            to="/reset-password"
+          >
+            Reset Password
+          </NavLink>
         </li>
       </ul>
     </div>
