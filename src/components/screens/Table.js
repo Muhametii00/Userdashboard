@@ -121,6 +121,7 @@ export const Table = () => {
               <td style={{ color: Colors.lightblue }}>Resume </td>
               <td style={{ color: Colors.lightblue }}>Cover Letter</td>
               <td style={{ color: Colors.lightblue }}>University Location</td>
+              <td style={{ color: Colors.lightblue }}>Message</td>
             </tr>
             <tr>
               <th style={{ color: Colors.black }}>
@@ -131,6 +132,7 @@ export const Table = () => {
               <td>{layoutInputs.inputValue.resume}</td>
               <td>{layoutInputs.inputValue.cv}</td>
               <td>{layoutInputs.inputValue.location}</td>
+              <td>{layoutInputs.message}</td>
             </tr>
           </table>
         </div>

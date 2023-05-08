@@ -24,6 +24,7 @@ export const Profile = () => {
   const handleClick = () => {
     navigate("/form-element", { state: { selectedItems } });
   };
+
   return (
     <div
       style={{
