@@ -266,7 +266,6 @@ export const Profile = () => {
             >
               <div onClick={() => selectedItem("Facebook")}>
                 <FacebookIcon
-                  id="Facebook"
                   color={
                     selectedItems === "Facebook" ? Colors.primary : Colors.grey
                   }
@@ -306,6 +305,7 @@ export const Profile = () => {
       </WhiteCard>
       <div style={{ float: "right", marginTop: "3%", marginRight: "3%" }}>
         <Button
+          disabled={!selectedItems}
           onClick={handleClick}
           background={Colors.primary}
           padding="15px"
