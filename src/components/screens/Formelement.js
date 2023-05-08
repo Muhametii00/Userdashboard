@@ -93,6 +93,7 @@ export const Formelement = () => {
                 Breakfast
               </p>
               <input
+                required="required"
                 value={inputValue.breakfast}
                 onChange={(e) => handleInputValue("breakfast", e.target.value)}
                 placeholder="What are you going to eating?"
@@ -870,6 +871,7 @@ export const Formelement = () => {
           }}
         >
           <Button
+            disabled={!inputValue.breakfast}
             onClick={handleClick}
             background={Colors.primary}
             padding="15px"
