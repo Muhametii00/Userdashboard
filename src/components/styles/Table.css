@@ -21,7 +21,6 @@ table th {
   padding: 15px;
   display: flex;
   align-items: center;
-  border-bottom: 3px solid #f7f9fc;
 }
 table th img {
   margin-right: 10px;
@@ -30,7 +29,6 @@ table th img {
 table td {
   text-align: left;
   padding: 10px;
-  border-bottom: 3px solid #f7f9fc;
   font-size: 16px;
   font-weight: 400;
   text-align: left;
