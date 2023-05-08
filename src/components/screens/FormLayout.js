@@ -205,6 +205,7 @@ export const FormLayout = () => {
                   }}
                 ></input>
                 <Button
+                  disabled={!layoutInputs.firstName}
                   width="98%"
                   background="#3C50E0"
                   border="0"
