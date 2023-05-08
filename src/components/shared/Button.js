@@ -11,6 +11,7 @@ export const Button = ({
   cursor = "pointer",
   bottom = "",
   onClick,
+  disabled,
 }) => {
   return (
     <button
@@ -25,6 +26,7 @@ export const Button = ({
         marginBottom: bottom,
       }}
       onClick={onClick}
+      disabled={disabled}
     >
       {children}
     </button>
