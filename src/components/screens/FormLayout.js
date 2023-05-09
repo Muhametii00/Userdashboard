@@ -18,7 +18,15 @@ export const FormLayout = () => {
     subject: "",
     message: "",
   };
+
   const [layoutInputs, setLayoutInputs] = useState(layoutInitialValues);
+
+  const isEnabled =
+    layoutInputs.firstName.length > 0 &&
+    layoutInputs.lastName.length > 0 &&
+    layoutInputs.email.length > 0 &&
+    layoutInputs.subject.length > 0 &&
+    layoutInputs.message.length > 0;
 
   const handleChange = (key, value) => {
     setLayoutInputs({ ...layoutInputs, [key]: value });
@@ -205,7 +213,7 @@ export const FormLayout = () => {
                   }}
                 ></input>
                 <Button
-                  disabled={!layoutInputs.firstName}
+                  disabled={!isEnabled}
                   width="98%"
                   background="#3C50E0"
                   border="0"
