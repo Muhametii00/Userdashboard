@@ -3,6 +3,7 @@ import WhiteCard from "../Cards.js/WhiteCard";
 import { Button } from "../shared/Button";
 import { useLocation } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import { Colors } from "../../assets/helpers/Colors";
 
 export const FormLayout = () => {
   const location = useLocation();
@@ -215,7 +216,7 @@ export const FormLayout = () => {
                 <Button
                   disabled={!isEnabled}
                   width="98%"
-                  background="#3C50E0"
+                  background={!isEnabled ? Colors.grey : Colors.primary}
                   border="0"
                   padding="15px"
                   radius="4px"
