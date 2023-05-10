@@ -887,7 +887,7 @@ export const Formelement = () => {
           <Button
             disabled={!isEnabled}
             onClick={handleClick}
-            background={Colors.primary}
+            background={!isEnabled ? Colors.grey : Colors.primary}
             padding="15px"
             border="0"
             radius="4px"
