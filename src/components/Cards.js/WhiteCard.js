@@ -2,8 +2,8 @@ import React from "react";
 
 const WhiteCard = ({
   children,
-  size = "",
-  height = "",
+  size,
+  height,
   radius = "2px",
   shadow = "0px 8px 13px -3px rgba(0, 0, 0, 0.07)",
 }) => {

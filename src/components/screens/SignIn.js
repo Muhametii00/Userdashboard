@@ -134,12 +134,12 @@ export const SignIn = () => {
               </Button>
               <Button
                 width="110%"
-                background="#EFF4FB"
                 color="#64748B"
                 border="0"
                 radius="8px"
                 padding="5px"
                 bottom="5%"
+                disabled={null}
               >
                 <span
                   style={{
