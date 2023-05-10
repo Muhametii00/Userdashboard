@@ -13,18 +13,22 @@ export const Button = ({
   onClick,
   disabled,
 }) => {
-  const backgroundColor = disabled
-    ? Colors.lightblue
-    : disabled === null
-    ? Colors.stroke
-    : Colors.primary;
+  const backgroundColor = () => {
+    if (disabled) {
+      return Colors.lightblue;
+    } else if (disabled === null) {
+      return Colors.stroke;
+    } else {
+      return Colors.primary;
+    }
+  };
   return (
     <button
       style={{
         width: width,
         padding: padding,
         borderRadius: radius,
-        backgroundColor: backgroundColor,
+        backgroundColor: backgroundColor(),
         border: border,
         color: color,
         cursor: cursor,
