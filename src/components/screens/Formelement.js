@@ -31,20 +31,25 @@ export const Formelement = () => {
   };
   const [inputValue, setInputValue] = useState(initialValues);
 
-  const isEnabled =
-    inputValue.breakfast.length > 0 &&
-    inputValue.lunch.length > 0 &&
-    inputValue.menu.length > 0 &&
-    inputValue.startdate.length > 0 &&
-    inputValue.enddate.length > 0 &&
-    inputValue.resume.length > 0 &&
-    inputValue.cv.length > 0 &&
-    inputValue.summer.length > 0 &&
-    inputValue.winter.length > 0 &&
-    inputValue.languages.length > 0 &&
-    inputValue.gender.length > 0 &&
-    inputValue.location.length > 0 &&
-    inputValue.degree.length > 0;
+  const isEnabled = () => {
+    if (
+      inputValue.breakfast &&
+      inputValue.lunch &&
+      inputValue.menu &&
+      inputValue.startdate &&
+      inputValue.enddate &&
+      inputValue.resume &&
+      inputValue.cv &&
+      inputValue.summer &&
+      inputValue.winter &&
+      inputValue.languages &&
+      inputValue.gender &&
+      inputValue.location &&
+      inputValue.degree
+    )
+      return false;
+    return true;
+  };
 
   const handleInputValue = (key, value) => {
     setInputValue({ ...inputValue, [key]: value });
@@ -885,9 +890,8 @@ export const Formelement = () => {
           }}
         >
           <Button
-            disabled={!isEnabled}
+            disabled={isEnabled()}
             onClick={handleClick}
-            background={!isEnabled ? Colors.grey : Colors.primary}
             padding="15px"
             border="0"
             radius="4px"
