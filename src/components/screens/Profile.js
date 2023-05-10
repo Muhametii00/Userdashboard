@@ -307,7 +307,7 @@ export const Profile = () => {
         <Button
           disabled={!selectedItems}
           onClick={handleClick}
-          background={Colors.primary}
+          background={!selectedItems ? Colors.grey : Colors.primary}
           padding="15px"
           border="0"
           radius="4px"
