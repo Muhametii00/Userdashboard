@@ -3,7 +3,6 @@ import WhiteCard from "../Cards.js/WhiteCard";
 import { Button } from "../shared/Button";
 import { useLocation } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import { Colors } from "../../assets/helpers/Colors";
 
 export const FormLayout = () => {
   const location = useLocation();
@@ -22,19 +21,23 @@ export const FormLayout = () => {
 
   const [layoutInputs, setLayoutInputs] = useState(layoutInitialValues);
 
-  const isEnabled =
-    layoutInputs.firstName.length > 0 &&
-    layoutInputs.lastName.length > 0 &&
-    layoutInputs.email.length > 0 &&
-    layoutInputs.subject.length > 0 &&
-    layoutInputs.message.length > 0;
+  const isEnabled = () => {
+    if (
+      layoutInputs.firstName &&
+      layoutInputs.lastName &&
+      layoutInputs.email &&
+      layoutInputs.subject &&
+      layoutInputs.message
+    )
+      return false;
+    return true;
+  };
 
   const handleChange = (key, value) => {
     setLayoutInputs({ ...layoutInputs, [key]: value });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = () => {
     navigate("/table", { state: { layoutInputs } });
   };
 
@@ -214,9 +217,8 @@ export const FormLayout = () => {
                   }}
                 ></input>
                 <Button
-                  disabled={!isEnabled}
+                  disabled={isEnabled()}
                   width="98%"
-                  background={!isEnabled ? Colors.grey : Colors.primary}
                   border="0"
                   padding="15px"
                   radius="4px"
