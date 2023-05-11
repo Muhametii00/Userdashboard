@@ -10,9 +10,9 @@ import FormControlLabel from "@mui/material/FormControlLabel";
 
 export const Formelement = () => {
   const navigate = useNavigate();
-  const location = useLocation();
+  const { state } = useLocation();
 
-  const selectedItems = location.state.selectedItems;
+  const selectedItems = state && state.selectedItems;
   const initialValues = {
     selectedItems,
     breakfast: "",
