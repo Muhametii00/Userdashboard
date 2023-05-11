@@ -5,10 +5,10 @@ import { useLocation } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
 export const FormLayout = () => {
-  const location = useLocation();
+  const { state } = useLocation();
   const navigate = useNavigate();
 
-  const inputValue = location.state.inputValue;
+  const inputValue = state && state.inputValue;
 
   const layoutInitialValues = {
     inputValue,
